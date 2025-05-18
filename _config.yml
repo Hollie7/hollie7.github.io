@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Chinese CHI 2023
-email: chchi2023@icachi.org
+title: Chinese CHI 2025
+email: tonyt@smu.edu.sg
 description: ICACHI 世界华人华侨人机交互协会
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
