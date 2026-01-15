@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7/css/all.min.css">
+    <link rel="icon" href="image/me_icon.png" type="image/png">
+    <title>Holly Tianqi Song | HCI research at NUS</title>
+    <style>
+        body {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            color: #2C3E50;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #2C3E50;
+            border-bottom: 1px dotted #95A5A6;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover,
+        a:active {
+            color: #E74C3C;
+            text-decoration: none;
+            border-bottom-color: #E74C3C;
+        }
+
+        h1 a {
+            color: #34495E;
+            border: none;
+            font-weight: 500;
+        }
+
+        h1 a:hover {
+            color: #2C3E50;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #34495E;
+            padding-bottom: 8px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #2C3E50;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #000000;
+        }
+
+        h4 {
+            font-size: 1em;
+            font-family: sans-serif;
+            font-weight: lighter;
+            color: #000000;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        h6 {
+            font-size: 1.05em;
+            line-height: 1.4;
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-weight: 500;
+        }
+
+        h6 a {
+            color: #2C3E50;
+            border-bottom: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        h6 a:hover {
+            color: #E74C3C;
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        .strong {
+            color: #E74C3C;
+            font-weight: 500;
+            margin-top: 4px !important;
+            margin-bottom: 0 !important;
+        }
+
+        .strong i {
+            margin-right: 4px;
+        }
+
+        .venue-label {
+            color: #7F8C8D;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .text-muted {
+            color: #5D6D7E !important;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 4px !important;
+            margin-top: 0 !important;
+        }
+
+        .text-muted strong {
+            color: #2C3E50;
+            font-weight: 600;
+        }
+
+        /* Keywords Section */
+        .keywords-section {
+            margin-bottom: 2rem;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .keywords-label {
+            font-weight: 600;
+            color: #2C3E50;
+            margin-right: 8px;
+        }
+
+        .keyword-tags {
+            display: inline;
+        }
+
+        .keyword-tag {
+            color: #2C3E50;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding: 0 2px;
+        }
+
+        .keyword-tag:hover {
+            color: #E74C3C;
+        }
+
+        .keyword-tag.active {
+            color: #E74C3C;
+            font-weight: 600;
+        }
+
+        .keyword-separator {
+            color: #95A5A6;
+            margin: 0 2px;
+        }
+
+        /* Author with Avatar */
+        .author-with-avatar {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            border-bottom: none;
+            /* 平时无虚线 */
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .author-with-avatar:hover {
+            color: #E74C3C;
+            border-bottom: 1px dotted #E74C3C;
+            /* 悬停时显示虚线 */
+        }
+
+        /* Ensure links maintain the same styling */
+        a.author-with-avatar {
+            text-decoration: none;
+        }
+
+        a.author-with-avatar:hover {
+            text-decoration: none;
+        }
+
+        .author-avatar-popup {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .author-avatar-popup.show {
+            display: block;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .avatar-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            min-width: 180px;
+        }
+
+        .avatar-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+        }
+
+        .avatar-card .name {
+            font-weight: 600;
+            color: #2C3E50;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .avatar-card .affiliation {
+            font-size: 12px;
+            color: #7F8C8D;
+            width: 150px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            header {
+                text-align: center;
+            }
+
+            .keywords-section {
+                text-align: left;
+            }
+
+            .keywords-label {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+
+        ul.social-icons {
+            font-size: 1rem;
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+
+        ul.social-icons li::before {
+            content: '[';
+        }
+
+        ul.social-icons li::after {
+            content: ']';
+        }
+
+        ul.social-icons li a {
+            border: none;
+        }
+
+        img.portrait {
+            max-width: 100%;
+        }
+
+        @media (max-width: 767.98px) {
+            img.portrait {
+                display: block;
+                max-width: 300px;
+                margin: auto;
+            }
+        }
+
+        .annotation {
+            margin-top: -0.5em;
+            margin-bottom: 0.5em;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        .taxonomy img {
+            max-width: 100%;
+        }
+
+        div.research-project {
+            font-size: 14px;
+            margin-bottom: 1rem;
+            padding: 0.25rem 0;
+            transition: opacity 0.3s ease;
+        }
+
+        div.research-project.hidden {
+            display: none;
+        }
+
+        div.line-of-research {
+            background-color: #F0F0F0;
+        }
+
+        div.research-project video {
+            max-width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        div.research-project p {
+            margin-bottom: 0.2rem;
+            margin-top: 0;
+        }
+
+        .news {
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+
+        .news li {
+            margin-bottom: 6px;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: #2C3E50;
+            margin-right: 4px;
+        }
+
+        #news-more {
+            display: none;
+        }
+
+        .tweets {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .info {
+            border-style: none;
+            font-weight: bold;
+            color: #999;
+        }
+
+        hr.dash {
+            border-top: 1px dashed #D5DBDB;
+            margin-bottom: 12px;
+            margin-top: 12px;
+        }
+
+        .switch {
+            position: relative;
+            display: block;
+            width: 32px;
+            height: 18px;
+            float: left;
+            top: 3px;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 3px;
+            right: 0;
+            bottom: -3px;
+            left: 0;
+            background-color: #ccc;
+            transition: 0.5s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        .active .slider {
+            background-color: #E74C3C;
+        }
+
+        .active .slider:before {
+            transform: translateX(14px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .alert-secondary {
+            background-color: #F8F9FA;
+            border: 1px solid #E8E9EA;
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .alert-secondary h3 {
+            color: #34495E;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-secondary div {
+            color: #5D6D7E;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Compact list for Services & Teaching */
+        .news.compact {
+            line-height: 1.35;
+        }
+
+        .news.compact li {
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="container">
+        <h1 class="float-md-left mb-0">
+            <a href="/">"Holly" Tianqi Song</a>
+        </h1>
+        <ul class="list-inline float-md-right social-icons">
+            <li class="list-inline-item"><a href="https://scholar.google.com/citations?user=RhxihiIAAAAJ&hl=en">Google
+                    Scholar</a></li>
+            <li class="list-inline-item"><a href="https://github.com/Hollie7">Github</a></li>
+            <li class="list-inline-item"><a href="https://x.com/song_holly77">Twitter</a></li>
+            <li class="list-inline-item"><a class="email-anchor">Email</a></li>
+        </ul>
+        <div class="clearfix"></div>
+        <hr>
+    </header>
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-xl-8 col-lg-9 col-md-8">
+
+                <p>
+                    I am “Holly” Tianqi Song (she/her), a PhD candidate in Computer Science at the National University
+                    of Singapore, advised by Prof.
+                    <a href="https://sites.google.com/view/ai4sg/about" target="_blank" rel="noopener noreferrer">
+                        Yi-Chieh (EJ) Lee
+                    </a>.
+                    I work in human–computer interaction (HCI), with a particular focus on how humans and AI systems
+                    co-exist, interact, and mutually influence one another in increasingly social and intelligent
+                    environments.
+                    <a href="#" id="toggle-research">More &gt;</a>
+                </p>
+
+
+                <div id="research-details" style="display: none;">
+                    <p style="margin-top: 4px;">
+                        In particular, I study:
+                    </p>
+
+                    <ul style="font-size: 14px; line-height: 1.6;">
+                        <li>
+                            <strong>Human–AI co-existence and agent societies</strong>,
+                            investigating how groups of AI agents exert social influence, form norms,
+                            and acquire social roles relative to humans.
+                        </li>
+                        <li>
+                            <strong>Lifespan, aging, and human needs</strong>,
+                            focusing on AI literacy, emotional support, and how intelligent technologies
+                            can empower older adults and adapt to people’s needs across different life stages.
+                        </li>
+                        <li>
+                            <strong>Responsible AI design</strong>,
+                            exploring how AI systems can be designed to reduce social stigma and cultivate
+                            constructive social atmospheres (“social vibes”) in human–AI interaction.
+                        </li>
+                    </ul>
+                </div>
+
+
+                <p>
+                    Prior to my PhD, I earned my bachelor’s degree in Computer Science and Technology from <a href="https://www.zju.edu.cn/english/" target="_blank" >Zhejiang
+                    University</a>,
+                    along with an Honors Program in Humanities and Social Sciences at the
+                    <a href="http://ckc.zju.edu.cn/ckcen/" target="_blank" rel="noopener noreferrer">
+                        Chu Kochen Honors College
+                    </a>.
+                </p>
+
+
+
+            </div>
+            <div class="offset-xl-1 col-lg-3 col-md-4">
+                <img src="image/me_portrait.png" class="portrait" alt="a portrait of tianqi song">
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- left column -->
+            <div class="col-lg-8 mb-2">
+                <h2>Selected Publications</h2>
+
+                <!-- Keywords Section -->
+                <div class="keywords-section">
+                    <span class="keywords-label">Keywords:</span>
+                    <span class="keyword-tags">
+                        <span class="keyword-tag active" data-keyword="all">All</span>
+                        <span class="keyword-separator">|</span>
+                        <span class="keyword-tag" data-keyword="multi-agent">Multi-Agent Social Influence</span>
+                        <span class="keyword-separator">|</span>
+                        <span class="keyword-tag" data-keyword="mental-health">Mental Health & Stigma</span>
+                        <span class="keyword-separator">|</span>
+                        <span class="keyword-tag" data-keyword="accessibility">Accessibility & Aging</span>
+                        <span class="keyword-separator">|</span>
+                        <span class="keyword-tag" data-keyword="visualization">Data Visualization</span>
+                        <span class="keyword-separator">|</span>
+                        <span class="keyword-tag" data-keyword="human-ai">Human-AI Interaction</span>
+                    </span>
+                </div>
+
+                <div class="research-projects">
+
+                    <!-- Featured Papers -->
+                    <div class="row research-project" data-sort="2025-10-16" data-keywords="multi-agent, human-ai">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/multi-agents-social/thumbnail.png">
+                                <source type="video/mp4" src="research/multi-agents-social/thumbnail.mp4">
+                                <source type="video/webm" src="research/multi-agents-social/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[CSCW 2025 - Full Paper]</div>
+                            <h6><a href="https://doi.org/10.1145/3757633">Multi-Agents are Social Groups: Investigating
+                                    Social Influence of Multiple Agents in Human-Agent Interactions</a></h6>
+                            <p class="text-muted">
+                                <strong>Tianqi Song</strong>†, <span class="author-link" data-author="yugin"></span>†,
+                                <span class="author-link" data-author="zicheng"></span>, <span class="author-link"
+                                    data-author="yibin"></span>, <span class="author-link" data-author="yichieh"></span>
+                            </p>
+                            <p class="strong">
+                                <i class="fas fa-award"></i> CSCW 2025 Methods Recognition
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2025-05-02" data-keywords="mental-health,human-ai">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/mental-health-stigma/thumbnail.png">
+                                <source type="video/mp4" src="research/mental-health-stigma/thumbnail.mp4">
+                                <source type="video/webm" src="research/mental-health-stigma/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[CSCW 2025 - Full Paper]</div>
+                            <h6><a href="https://doi.org/10.1145/3710987">From Interaction to Attitude: Exploring the
+                                    Impact of Human-AI Cooperation on Mental Illness Stigma</a></h6>
+                            <p class="text-muted">
+                                <strong>Tianqi Song</strong>, <span class="author-link" data-author="jack"></span>,
+                                Tianwen Zhu, <span class="author-link" data-author="naomi"></span>, <span
+                                    class="author-link" data-author="yichieh"></span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2025-03-01" data-keywords="human-ai">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/llm-uncertainty/thumbnail.png">
+                                <source type="video/mp4" src="research/llm-uncertainty/thumbnail.mp4">
+                                <source type="video/webm" src="research/llm-uncertainty/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[IJHCS 2025 - Full Paper]</div>
+                            <h6><a href="https://doi.org/10.1016/j.ijhcs.2025.103455">Confronting Verbalized
+                                    Uncertainty: Understanding How LLM's Verbalized Uncertainty Influences Users in
+                                    AI-Assisted Decision-Making</a></h6>
+                            <p class="text-muted">
+                                <span class="author-link" data-author="zhengtao"></span>, <strong>Tianqi Song</strong>,
+                                <span class="author-link" data-author="yichieh"></span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="alert alert-secondary">
+                        <h3>Human-AI Collaboration & Multi-Agent Systems</h3>
+                        <div>
+                            My research explores how multiple AI agents interact with humans and influence
+                            decision-making,
+                            behavior, and social dynamics. This work contributes to understanding effective human-AI
+                            collaboration
+                            and designing AI systems that promote positive outcomes.
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2025-04-25" data-keywords="multi-agent,human-ai">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/greater-sum/thumbnail.jpg">
+                                <source type="video/mp4" src="research/greater-sum/thumbnail.mp4">
+                                <source type="video/webm" src="research/greater-sum/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[CHI 2025 - Extended Abstract]</div>
+                            <h6><a href="https://doi.org/10.1145/3706599.3719973">Greater than the Sum of its Parts:
+                                    Exploring Social Influence of Multi-Agents</a></h6>
+                            <p class="text-muted">
+                                <strong>Tianqi Song</strong>, <span class="author-link" data-author="yugin"></span>,
+                                <span class="author-link" data-author="zicheng"></span>, <span class="author-link"
+                                    data-author="yibin"></span>, <span class="author-link" data-author="yichieh"></span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2025-10-17" data-keywords="multi-agent,human-ai">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/social-norms/thumbnail.jpg">
+                                <source type="video/mp4" src="research/social-norms/thumbnail.mp4">
+                                <source type="video/webm" src="research/social-norms/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[CSCW 2025 - Companion]</div>
+                            <h6><a href="https://doi.org/10.1145/3715070.3749246">Multi-Agent Systems Shape Social Norms
+                                    for Prosocial Behavior Change</a></h6>
+                            <p class="text-muted">
+                                <span class="author-link" data-author="yibin"></span>, <strong>Tianqi Song</strong>,
+                                <span class="author-link" data-author="yugin"></span>, <span class="author-link"
+                                    data-author="zicheng"></span>, <span class="author-link"
+                                    data-author="yichieh"></span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2025-04-10" data-keywords="multi-agent,human-ai">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/multi-ai-opinions/thumbnail.png">
+                                <source type="video/mp4" src="research/multi-ai-opinions/thumbnail.mp4">
+                                <source type="video/webm" src="research/multi-ai-opinions/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[ICLR 2025 Workshop - Human-AI Coevolution]</div>
+                            <h6><a href="https://openreview.net/forum?id=6zlttMWe4G">The More, The Stronger?
+                                    Investigating How Multi-Agent AI Shapes Human Opinions</a></h6>
+                            <p class="text-muted">
+                                <strong>Tianqi Song</strong>, <span class="author-link" data-author="yugin"></span>,
+                                <span class="author-link" data-author="zicheng"></span>, <span class="author-link"
+                                    data-author="maojia"></span>, <span class="author-link" data-author="yibin"></span>,
+                                <span class="author-link" data-author="yichieh"></span>
+                            </p>
+                            <p class="strong">
+                                <i class="fas fa-star"></i> Spotlight Talk
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="alert alert-secondary">
+                        <h3>Accessibility, Aging & Intergenerational Technology</h3>
+                        <div>
+                            Technology can improve quality of life for older adults and bridge generational gaps.
+                            My work explores how VR and AI can reduce ageism and empower individuals with diverse
+                            literacy levels.
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2025-04-25" data-keywords="accessibility">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/ai-literacy-older/thumbnail.png">
+                                <source type="video/mp4" src="research/ai-literacy-older/thumbnail.mp4">
+                                <source type="video/webm" src="research/ai-literacy-older/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[CHI 2025 - Extended Abstract]</div>
+                            <h6><a href="https://doi.org/10.1145/3706599.3720033">AI Literacy Education for Older
+                                    Adults: Motivations, Challenges and Preferences</a></h6>
+                            <p class="text-muted">
+                                <span class="author-link" data-author="eugene"></span>, <strong>Tianqi Song</strong>,
+                                <span class="author-link" data-author="zicheng"></span>, <span class="author-link"
+                                    data-author="jingshu"></span>, <span class="author-link"
+                                    data-author="yichieh"></span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2024-05-11" data-keywords="accessibility">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/vr-ageism/thumbnail.png">
+                                <source type="video/webm" src="research/vr-ageism/thumbnail.webm">
+                                <source type="video/mp4" src="research/vr-ageism/thumbnail.mp4">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[CHI 2024 - Extended Abstract]</div>
+                            <h6><a href="https://doi.org/10.1145/3613905.3650914">Mitigating Ageism through Virtual
+                                    Reality: Intergenerational Collaborative Escape Room Design</a></h6>
+                            <p class="text-muted">
+                                <span class="author-link" data-author="ruotong"></span>, Shuyu Yin, <strong>Tianqi
+                                    Song</strong>, Peinuan Qin, <span class="author-link" data-author="yichieh"></span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="alert alert-secondary">
+                        <h3>Data Visualization & Systems</h3>
+                        <div>
+                            Earlier work on data visualization, security systems, and knowledge networks from
+                            collaborations
+                            at Zhejiang University and Microsoft Research Asia.
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2023-01-01" data-keywords="visualization">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/causality-vis/thumbnail.png">
+                                <source type="video/webm" src="research/causality-vis/thumbnail.webm">
+                                <source type="video/mp4" src="research/causality-vis/thumbnail.mp4">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[IEEE TVCG 2023 - Full Paper]</div>
+                            <h6><a href="https://doi.org/10.1109/TVCG.2023.3327376">Causality-Based Visual Analysis of
+                                    Questionnaire Responses</a></h6>
+                            <p class="text-muted">
+                                Renzhong Li, Weiwei Cui, <strong>Tianqi Song</strong>, Xiao Xie, Rui Ding, Yun Wang,
+                                Haidong Zhang, Hong Zhou, Yingcai Wu
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                    <div class="row research-project" data-sort="2022-11-05" data-keywords="visualization">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/wikilink/thumbnail.jpg">
+                                <source type="video/webm" src="research/wikilink/thumbnail.webm">
+                                <source type="video/mp4" src="research/wikilink/thumbnail.mp4">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[Journal of Intelligence 2022 - Full Paper]</div>
+                            <h6><a href="https://doi.org/10.3390/jintelligence10040103">WikiLink: An Encyclopedia-Based
+                                    Semantic Network for Design Creativity</a></h6>
+                            <p class="text-muted">
+                                Haoyu Zuo, Qianzhi Jing, <strong>Tianqi Song</strong>, Lingyun Sun, Peter Childs,
+                                Liuqing Chen
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End of research-projects div -->
+            </div>
+            <!-- End of left column (col-lg-8) -->
+
+            <!-- right column -->
+            <div class="col-lg-4 mb-2">
+
+                <h2>Latest News</h2>
+                <ul class="news" style="font-size: 13px">
+                    <li><span class="news-date">2025 Dec</span> - Our paper received Best Paper Award from <a
+                            href="https://multiagents.org/2026/">AAAI WAIC</a>!</li>
+                    <li><span class="news-date">2025 Oct</span> - I attended CSCW 🇳🇴 and presented our two papers on
+                        social stigma and multi-agent.</li>
+                    <li><span class="news-date">2025 Oct</span> - Our paper received <a
+                            href="https://medium.com/acm-cscw/announcing-the-best-of-cscw-2025-a95517e67ba3">Methods
+                            Recognition</a> from CSCW.</li>
+                    <li><span class="news-date">2025 Aug</span> - Our research on multi-agent was recently featured by
+                        <a
+                            href="https://www.comp.nus.edu.sg/features/when-ai-talks-in-groups-how-multi-agent-systems-may-be-shaping-your-opinions/">NUS
+                            School of Computing</a>.
+                    </li>
+                    <li><span class="news-date">2025 Jun</span> - I served as <a
+                            href="https://ichec.icachi.org/25/committee/">Publicity Chair</a> for ICHEC 2025!</li>
+                    <li><span class="news-date">2025 Jun</span> - I passed QE and became a PhD candidate.</li>
+                </ul>
+                <ul class="news" id="news-more" style="font-size: 13px">
+                    <li><span class="news-date">2025 May</span> - I attended ICLR 🇸🇬 & CHI 🇯🇵 and presented our work
+                        on multi-agent & social influence.</li>
+                    <li><span class="news-date">2025 Feb</span> - Our paper received <a
+                            href="https://www.linkedin.com/posts/nuscomputing_phd-student-song-tianqi-received-the-top-activity-7346485361092567042-Nui5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6hh9kBrXorEJuxwrfgRQen4tPv8u-yIUQ">Top
+                            Paper Award</a> in the 75th ICA Conference (HMC division)!</li>
+                    <li><span class="news-date">2024 Oct</span> - My first HCI paper has been accepted to CSCW 2025!
+                        Many thanks to my amazing collaborators for making this possible.</li>
+                    <li><span class="news-date">2024 Jun</span> - I attended <a
+                            href="https://sicss.io/2024/singapore/people">SICSS-Singapore</a> and presented our work on
+                        multi-agent & social influence.</li>
+                    <li><span class="news-date">2024 Jan</span> - I started PhD at NUS</li>
+                </ul>
+                <a id="toggle-more-news" href="#">More &gt;</a>
+                <br />
+                <br />
+
+                <h2>Academic Services</h2>
+
+                <p style="font-size: 13px; margin-bottom: 4px;">
+                    <strong>Organisers</strong>
+                </p>
+                <ul class="news compact" style="font-size: 13px;">
+                    <li>
+                        <a href="https://ichec.icachi.org/25/" target="_blank" rel="noopener noreferrer">
+                            ICHEC 2025
+                        </a> | Publicity Chair
+                    </li>
+                </ul>
+
+                <p style="font-size: 13px; margin-bottom: 4px; margin-top: 10px;">
+                    <strong>Program Committees</strong>
+                </p>
+                <ul class="news compact" style="font-size: 13px;">
+                    <li>ACM IUI | 2026</li>
+                </ul>
+
+
+                <p style="font-size: 13px; margin-bottom: 4px; margin-top: 10px;">
+                    <strong>Reviewers</strong>
+                </p>
+                <ul class="news compact" style="font-size: 13px;">
+                    <li>ACM CHI | 2025, 2026</li>
+                    <li>ACM CSCW | 2024, 2025</li>
+                    <li>IJHCI | 2025</li>
+                    <li>ACM AHs | 2025</li>
+                    <li>JMIR AI | 2025</li>
+                </ul>
+                <br>
+
+
+
+                <h2>Teaching & Volunteers</h2>
+                <p style="font-size: 13px; margin-bottom: 4px; margin-top: 10px;">
+                    <strong>Teaching Assistants</strong>
+                </p>
+                <ul class="news compact" style="font-size: 13px;">
+                    <li>IT5001 | 2025 Fall, 2024 Fall, 2024 Spring, 2023 Fall</li>
+                    <li><a href="https://cs3249.ai4sg.org/" target="_blank" rel="noopener noreferrer">
+                            CS3249
+                        </a> | 2025 Fall</li>
+                </ul>
+
+                <p style="font-size: 13px; margin-bottom: 4px; margin-top: 10px;">
+                    <strong>Volunteers</strong>
+                </p>
+                <ul class="news compact" style="font-size: 13px;">
+                    <li>
+                        Mentor (<a href="https://nuswit.wixsite.com/nuswit" target="_blank"
+                            rel="noopener noreferrer">NUS Women in Tech Mentorship Program</a>) | 2024 Spring, 2025
+                        Spring
+                    </li>
+                    <li>
+                        <a href="https://osa.nus.edu.sg/" target="_blank">Peer Student Support</a> | 2025 Spring
+                    </li>
+                </ul>
+                <br>
+
+
+                <h2>Awards & Honors</h2>
+                <ul class="news" style="font-size: 13px">
+                    <li><span class="news-date">2026</span> Best Paper Award, AAAI WMAC</li>
+                    <li><span class="news-date">2025</span> Honour List for Teaching Excellence, NUS SoC</li>
+                    <li><span class="news-date">2025</span> CSCW Methods Recognition</li>
+                    <li><span class="news-date">2025</span> Research Achievement Award, NUS SoC</li>
+                    <li><span class="news-date">2025</span> ICA Top Paper Award (HMC Division)</li>
+                    <li><span class="news-date">2025</span> Teaching Fellowship, NUS SoC</li>
+                    <li><span class="news-date">2024</span> Dean's List, NUS SoC</li>
+                    <li><span class="news-date">2022</span> Huawei Elite Student Scholarship</li>
+                    <li><span class="news-date">2020-21</span> Chu Kochen Honors Scholarship</li>
+                </ul>
+                <br />
+
+
+                <h2>Media Coverage</h2>
+                <ul class="news" style="font-size: 13px">
+                    <li><a href="https://www.comp.nus.edu.sg/bytes/phd-student-tianqi-song-receives-methods-recognitions-at-cscw-2025/"
+                            target="_blank">NUS Computing Bytes</a> - Method Recognition at CSCW 2025</li>
+                    <li><a href="https://www.comp.nus.edu.sg/bytes/phd-student-song-tianqi-received-the-top-paper-award-at-the-75th-annual-ica-conference/"
+                            target="_blank">NUS Computing Bytes</a> - Top Paper Award at ICA 2025</li>
+                    <li><a href="https://www.comp.nus.edu.sg/features/when-ai-talks-in-groups-how-multi-agent-systems-may-be-shaping-your-opinions/"
+                            target="_blank">NUS Computing Feature</a> - Multi-Agent Systems & Opinion Formation</li>
+                    <li><a href="https://www.youtube.com/watch?v=Wj-sZZ1CffE" target="_blank">Discover AI (YouTube)</a>
+                        - Social Manipulation by Design</li>
+                    <li><a href="https://www.youtube.com/watch?v=EVy16V2Z0mI" target="_blank">Root Access (YouTube)</a>
+                        - Interview on Multi-Agent Systems</li>
+                </ul>
+
+                <br />
+
+                <h2>About Me</h2>
+                <p style="font-size: 13px">
+                    Beyond research, I'm a seeker of human well-being and a big fan of Taylor Swift 💜.
+                    In my spare time, I enjoy swimming, drawing/reading comics or eating McDonald's fries with
+                    mixed ketchup and chili sauces. Hope to share McDonald's together with you! 🍟
+                </p>
+                <br />
+
+
+                <div class="mt-3 tweets">
+                    <a class="twitter-timeline" width="100%" height="1800" href="https://twitter.com/song_holly77">
+                        Tweets by Holly Song
+                    </a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+
+            </div>
+            <!-- End of right column -->
+        </div>
+        <!-- End of row -->
+
+    </div>
+    <!-- End of container -->
+
+    <footer>
+        <div class="container">
+            <small>
+      &copy; 2025 – 2026 All rights reserved.
+      <br/>
+Webpage template adapted from
+<a href="https://www.yangzhang.dev/" target="_blank" rel="noopener noreferrer">Yang Zhang</a>.
+This webpage design is inspired by the personal websites of several HCI researchers,
+including
+<a href="https://shuaima.cc/" target="_blank" rel="noopener noreferrer">Shuai Ma</a>,
+<a href="https://www.joonsungpark.com/" target="_blank" rel="noopener noreferrer">Joon Sung Park</a>,
+and
+<a href="https://amber.botao.hu/" target="_blank" rel="noopener noreferrer">Botao Amber Hu</a>.
+</small>
+
+        </div>
+    </footer>
+
+    <!-- Author Avatar Popup Container -->
+    <div id="author-avatar-popup" class="author-avatar-popup">
+        <div class="avatar-card">
+            <img id="popup-avatar" src="" alt="">
+            <div class="name" id="popup-name"></div>
+            <div class="affiliation" id="popup-affiliation"></div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+<script>
+    // ============================================
+    // AUTHOR DATABASE - Centralized Author Information
+    // ============================================
+    const AUTHORS = {
+        yugin: {
+            id: 'yugin',
+            name: 'Yugin Tan',
+            affiliation: 'PhD student at NUS',
+            avatar: 'image/avatars/yugin.jpg',
+            hasAvatar: true,
+            homepage: 'https://lumos309.notion.site/Work-in-Progress-b3373f39bab748d6ae9dd30b38758334'  // 个人主页 (可选)
+        },
+        zicheng: {
+            id: 'zicheng',
+            name: 'Zicheng Zhu',
+            affiliation: 'Postdoc at NUS',
+            avatar: 'image/avatars/zicheng.jpg',
+            hasAvatar: true,
+            homepage: 'https://www.zicheng-zhu.com/'
+        },
+        jack: {
+            id: 'jack',
+            name: 'Jack Jamieson',
+            affiliation: 'Associate Distinguished Researcher at NTT Social Informatics Laboratories',
+            avatar: 'image/avatars/jack.jpg',
+            hasAvatar: true,
+            homepage: 'https://jackjamieson.net'
+        },
+        naomi: {
+            id: 'naomi',
+            name: 'Naomi Yamashita',
+            affiliation: 'Professor at Kyoto University',
+            avatar: 'image/avatars/naomi.jpg',
+            hasAvatar: true,
+            homepage: 'https://naomi-yamashita.net/'
+        },
+        yibin: {
+            id: 'yibin',
+            name: 'Yibin Feng',
+            affiliation: 'Software Engineer, previously Master Student at NUS',
+            avatar: 'image/avatars/yibin.jpg',
+            hasAvatar: true,
+            homepage: 'https://fengyibin66.github.io/'
+        },
+        yichieh: {
+            id: 'yichieh',
+            name: 'Yi-Chieh Lee',
+            affiliation: 'Assistant Professor at NUS',
+            avatar: 'image/avatars/yi-chieh.jpg',
+            hasAvatar: true,
+            homepage: 'https://www.yclee.net/'
+        },
+        eugene: {
+            id: 'eugene',
+            name: 'Eugene Tang Kangjie',
+            affiliation: 'Software Engineer, previously Undergraduate Student at NUS',
+            avatar: 'image/avatars/eugene.jpg',
+            hasAvatar: true,
+            homepage: 'https://www.eugenetangkj.com/'
+        },
+        maojia: {
+            id: 'maojia',
+            name: 'Maojia Song',
+            affiliation: 'PhD Student at SUTD',
+            avatar: 'image/avatars/maojia.jpg',
+            hasAvatar: true,
+            homepage: 'https://maojiasong.github.io/'
+        },
+        jingshu: {
+            id: 'jingshu',
+            name: 'Jingshu Li',
+            affiliation: 'PhD Student at NUS',
+            avatar: 'image/avatars/jingshu.jpg',
+            hasAvatar: true,
+            homepage: 'https://jasonleejsl.github.io/'
+        },
+        zhengtao: {
+            id: 'zhengtao',
+            name: 'Zhengtao Xu',
+            affiliation: 'PhD Student at NUS',
+            avatar: 'image/avatars/zhengtao.jpg',
+            hasAvatar: true,
+            homepage: 'https://zhengtaoxu.com/'
+        },
+        ruotong: {
+            id: 'ruotong',
+            name: 'Ruotong Zou',
+            affiliation: 'Incoming Meta SDE, previously research intern at NUS',
+            avatar: 'image/avatars/ruotong.jpg',
+            hasAvatar: true,
+            homepage: 'https://www.linkedin.com/in/ruotong-zou-11042631b/'
+        }
+    };
+
+    // ============================================
+    // INITIALIZE AUTHORS
+    // ============================================
+    function initializeAuthors() {
+        $('.author-link').each(function () {
+            const authorId = $(this).data('author');
+            const author = AUTHORS[authorId];
+
+            if (author) {
+                let authorHTML = '';
+
+                if (author.homepage) {
+                    // Author has a homepage - create clickable link
+                    if (author.hasAvatar) {
+                        // With avatar popup on hover
+                        authorHTML = `<a href="${author.homepage}" target="_blank" rel="noopener noreferrer" class="author-with-avatar" data-author="${author.id}" data-name="${author.name}" data-affiliation="${author.affiliation}">${author.name}</a>`;
+                    } else {
+                        // Just a link without avatar
+                        authorHTML = `<a href="${author.homepage}" target="_blank" rel="noopener noreferrer">${author.name}</a>`;
+                    }
+                } else {
+                    // No homepage
+                    if (author.hasAvatar) {
+                        // With avatar popup but not clickable
+                        authorHTML = `<span class="author-with-avatar" data-author="${author.id}" data-name="${author.name}" data-affiliation="${author.affiliation}">${author.name}</span>`;
+                    } else {
+                        // Plain text
+                        authorHTML = author.name;
+                    }
+                }
+
+                $(this).replaceWith(authorHTML);
+            } else {
+                console.warn(`Author "${authorId}" not found in AUTHORS database`);
+                $(this).replaceWith('[Unknown Author]');
+            }
+        });
+    }
+
+    // Call initialization when document is ready
+    $(document).ready(function () {
+        initializeAuthors();
+    });
+
+    // ============================================
+    // EXISTING FUNCTIONALITY
+    // ============================================
+
+    // Toggle more news
+    $('#toggle-more-news').click(function () {
+        $('#news-more').slideToggle();
+        $('#news-more').is(':visible') ? $(this).text('< Hide') : $(this).text('More >');
+        return false;
+    });
+
+    // Video autoplay on scroll
+    $(window).on('scroll', function () {
+        $('video').each(function () {
+            var video = this;
+            var rect = video.getBoundingClientRect();
+
+            if (
+                rect.top >= 0 && rect.left >= 0 &&
+                rect.bottom <= $(window).height() &&
+                rect.right <= $(window).width()
+            ) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    });
+
+    // Keyword filtering functionality
+    var allProjects = $('div.research-project');
+    var currentKeyword = 'all';
+
+    $('.keyword-tag').click(function () {
+        var keyword = $(this).data('keyword');
+        currentKeyword = keyword;
+
+        // Update active state
+        $('.keyword-tag').removeClass('active');
+        $(this).addClass('active');
+
+        // Filter projects
+        if (keyword === 'all') {
+            allProjects.removeClass('hidden');
+        } else {
+            allProjects.each(function () {
+                var projectKeywords = $(this).data('keywords');
+                if (projectKeywords && projectKeywords.toString().includes(keyword)) {
+                    $(this).removeClass('hidden');
+                } else {
+                    $(this).addClass('hidden');
+                }
+            });
+        }
+    });
+
+    // Sort by date (default behavior)
+    var researchProjects = $('.research-projects').html();
+
+    var researchProjectsSorted = $('div.research-project').sort(function (a, b) {
+        var contentA = $(a).attr('data-sort');
+        var contentB = $(b).attr('data-sort');
+        return (contentA < contentB) ? 1 : (contentA > contentB) ? -1 : 0;
+    });
+
+    $('.sort-by-date').click(function () {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $('.research-projects').html(researchProjects);
+        } else {
+            $('.research-projects').html(researchProjectsSorted);
+        }
+    });
+
+    $('.research-projects').html(researchProjectsSorted);
+
+    // Email anchor
+    document.querySelectorAll('.email-anchor').forEach(function (a) {
+        a.href = 'mailto:' + ['tianqi_song', 'u.nus.edu'].join('@');
+    });
+
+    // Author avatar popup functionality
+    const popup = $('#author-avatar-popup');
+    const popupAvatar = $('#popup-avatar');
+    const popupName = $('#popup-name');
+    const popupAffiliation = $('#popup-affiliation');
+
+    $(document).on('mouseenter', '.author-with-avatar', function (e) {
+        const authorId = $(this).data('author');
+        const author = AUTHORS[authorId];
+
+        if (author && author.hasAvatar) {
+            // Set popup content
+            popupAvatar.attr('src', author.avatar);
+            popupAvatar.attr('alt', author.name);
+            popupName.text(author.name);
+            popupAffiliation.text(author.affiliation);
+
+            // Position popup above the author name
+            const rect = this.getBoundingClientRect();
+            const popupWidth = 180;
+
+            popup.css({
+                'left': (rect.left + rect.width / 2 - popupWidth / 2) + 'px',
+                'top': (rect.top - 10) + 'px',
+                'transform': 'translateY(-100%)'
+            });
+
+            popup.addClass('show');
+        }
+    }).on('mouseleave', '.author-with-avatar', function () {
+        popup.removeClass('show');
+    });
+</script>
+<script>
+    $('#toggle-research').click(function () {
+        $('#research-details').slideToggle();
+        $('#research-details').is(':visible')
+            ? $(this).text('< Hide')
+            : $(this).text('More >');
+        return false;
+    });
+</script>
+
+
+</html>
