@@ -230,13 +230,15 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-5px);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
+        }
+
+        .author-avatar-popup.show {
+            animation: fadeIn 0.3s ease;
         }
 
         @media (max-width: 767.98px) {
@@ -494,8 +496,9 @@
 
 
                 <p>
-                    Prior to my PhD, I earned my bachelor’s degree in Computer Science and Technology from <a href="https://www.zju.edu.cn/english/" target="_blank" >Zhejiang
-                    University</a>,
+                    Prior to my PhD, I earned my bachelor’s degree in Computer Science and Technology from <a
+                        href="https://www.zju.edu.cn/english/" target="_blank">Zhejiang
+                        University</a>,
                     along with an Honors Program in Humanities and Social Sciences at the
                     <a href="http://ckc.zju.edu.cn/ckcen/" target="_blank" rel="noopener noreferrer">
                         Chu Kochen Honors College
@@ -536,6 +539,31 @@
                 <div class="research-projects">
 
                     <!-- Featured Papers -->
+                    <div class="row research-project" data-sort="2026-1-16" data-keywords="human-ai">
+                        <div class="col-md-4">
+                            <video loop muted playsinline poster="research/virtual-kinship/thumbnail.png">
+                                <source type="video/mp4" src="research/virtual-kinship/thumbnail.mp4">
+                                <source type="video/webm" src="research/virtual-kinship/thumbnail.webm">
+                            </video>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="venue-label">[To appear in CHI 2026 - Full Paper]</div>
+                            <h6><a href="https://doi.org/10.1145/3757633">Understanding Older Adults' Experiences of
+                                    Support, Concerns, and Risks from Kinship-Role AI-Generated Influencers</a></h6>
+                            <p class="text-muted">
+                                <strong>Tianqi Song</strong>, <span class="author-link" data-author="black"></span>,
+                                <span class="author-link" data-author="jingshu"></span>,
+                                <span class="author-link" data-author="lihan"></span>, <span class="author-link"
+                                    data-author="chilan"></span>, Yijia Xu, <span class="author-link"
+                                    data-author="yichieh"></span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr class="dash">
+                        </div>
+                    </div>
+
+
                     <div class="row research-project" data-sort="2025-10-16" data-keywords="multi-agent, human-ai">
                         <div class="col-md-4">
                             <video loop muted playsinline poster="research/multi-agents-social/thumbnail.png">
@@ -553,7 +581,8 @@
                                     data-author="yibin"></span>, <span class="author-link" data-author="yichieh"></span>
                             </p>
                             <p class="strong">
-                                <i class="fas fa-award"></i> CSCW 2025 Methods Recognition
+                                <i class="fas fa-award"></i> CSCW 2025 Methods Recognition <i class="fas fa-trophy"></i>
+                                ICA 2025 Top Paper Award
                             </p>
                         </div>
                         <div class="col-md-12">
@@ -906,7 +935,7 @@
                     <li><span class="news-date">2025</span> Teaching Fellowship, NUS SoC</li>
                     <li><span class="news-date">2024</span> Dean's List, NUS SoC</li>
                     <li><span class="news-date">2022</span> Huawei Elite Student Scholarship</li>
-                    <li><span class="news-date">2020-21</span> Chu Kochen Honors Scholarship</li>
+                    <li><span class="news-date">2021</span> Zhejiang University First-Class Scholarship </li>
                 </ul>
                 <br />
 
@@ -955,17 +984,17 @@
     <footer>
         <div class="container">
             <small>
-      &copy; 2025 – 2026 All rights reserved.
-      <br/>
-Webpage template adapted from
-<a href="https://www.yangzhang.dev/" target="_blank" rel="noopener noreferrer">Yang Zhang</a>.
-This webpage design is inspired by the personal websites of several HCI researchers,
-including
-<a href="https://shuaima.cc/" target="_blank" rel="noopener noreferrer">Shuai Ma</a>,
-<a href="https://www.joonsungpark.com/" target="_blank" rel="noopener noreferrer">Joon Sung Park</a>,
-and
-<a href="https://amber.botao.hu/" target="_blank" rel="noopener noreferrer">Botao Amber Hu</a>.
-</small>
+                &copy; 2025 – 2026 All rights reserved.
+                <br />
+                Webpage template adapted from
+                <a href="https://www.yangzhang.dev/" target="_blank" rel="noopener noreferrer">Yang Zhang</a>.
+                This webpage design is inspired by the personal websites of several HCI researchers,
+                including
+                <a href="https://shuaima.cc/" target="_blank" rel="noopener noreferrer">Shuai Ma</a>,
+                <a href="https://www.joonsungpark.com/" target="_blank" rel="noopener noreferrer">Joon Sung Park</a>,
+                and
+                <a href="https://amber.botao.hu/" target="_blank" rel="noopener noreferrer">Botao Amber Hu</a>.
+            </small>
 
         </div>
     </footer>
@@ -1074,6 +1103,30 @@ and
             avatar: 'image/avatars/ruotong.jpg',
             hasAvatar: true,
             homepage: 'https://www.linkedin.com/in/ruotong-zou-11042631b/'
+        },
+        black: {
+            id: 'black',
+            name: 'Black Sun',
+            affiliation: 'Master Student at Aarhus University',
+            avatar: 'image/avatars/black.jpg',
+            hasAvatar: true,
+            homepage: 'https://blackthompson.github.io/'
+        },
+        lihan: {
+            id: 'lihan',
+            name: 'Han Li',
+            affiliation: 'Postdoc at Cornell University',
+            avatar: 'image/avatars/lihan.jpg',
+            hasAvatar: true,
+            homepage: 'https://sites.google.com/view/han-li/bio'
+        },
+        chilan: {
+            id: 'chilan',
+            name: 'Chi-lan Yang',
+            affiliation: 'Assistant Professor at Tokyo University',
+            avatar: 'image/avatars/chilan.jpg',
+            hasAvatar: true,
+            homepage: 'https://www.chilanyang.space/'
         }
     };
 
