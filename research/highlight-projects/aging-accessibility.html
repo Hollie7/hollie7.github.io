@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7/css/all.min.css">
+    <link rel="icon" href="../../image/me_icon.png" type="image/png">
+    <title>Aging & Accessibility | Holly Tianqi Song</title>
+    <style>
+        :root {
+            --accent-color: #D4735E;
+            --accent-hover: #B85D48;
+            --accent-light: #E8957E;
+            --accent-bg: rgba(212, 115, 94, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            color: #37352F;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 250px;
+            background: url('../../image/research/aging-accessibility-header.png') center/cover;
+            margin-bottom: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: underline;
+            text-decoration-color: rgba(212, 115, 94, 0.4);
+            transition: all 0.1s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration-color: var(--accent-hover);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #37352F;
+            margin: 1rem 0 0.5rem 0;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #37352F;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-description {
+            font-size: 1em;
+            color: rgba(55, 53, 47, 0.65);
+            margin: 1rem 0 2rem 0;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 4px 8px;
+            font-size: 14px;
+            color: rgba(55, 53, 47, 0.65);
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background 0.1s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(55, 53, 47, 0.08);
+        }
+
+        .back-link i {
+            font-size: 12px;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .paper-list {
+            margin: 1rem 0;
+        }
+
+        .paper-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+        }
+
+        .paper-item:last-child {
+            border-bottom: none;
+        }
+
+        .paper-title {
+            font-size: 1em;
+            font-weight: 500;
+            color: #37352F;
+            margin-bottom: 0.25rem;
+            line-height: 1.5;
+        }
+
+        .paper-title a {
+            color: #37352F;
+        }
+
+        .paper-meta {
+            font-size: 0.875em;
+            color: rgba(55, 53, 47, 0.65);
+            margin: 0.25rem 0;
+        }
+
+        .paper-authors {
+            font-size: 0.875em;
+            color: rgba(55, 53, 47, 0.65);
+            margin: 0.25rem 0;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: #37352F;
+        }
+
+        .focus-areas {
+            margin: 1rem 0;
+        }
+
+        .focus-item {
+            margin-bottom: 1rem;
+        }
+
+        .focus-title {
+            font-weight: 600;
+            color: #37352F;
+            margin-bottom: 0.25rem;
+        }
+
+        .focus-description {
+            font-size: 0.9375em;
+            color: rgba(55, 53, 47, 0.65);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 767.98px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-image"></div>
+    <div class="container">
+        <a href="../../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </a>
+
+        <h1>Aging & Accessibility</h1>
+        <p class="hero-description">
+            Exploring how AI and technology can empower older adults, reduce ageism, and bridge generational gaps through inclusive design. This research focuses on creating technology that adapts to diverse needs across different life stages and promotes digital literacy among older populations.
+        </p>
+
+        <div class="section">
+            <h2>Related Papers</h2>
+            <div class="paper-list">
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            Understanding Older Adults' Experiences of Support, Concerns, and Risks from Kinship-Role AI-Generated Influencers
+                        </a>
+                    </div>
+                    <div class="paper-meta">CHI 2026 - Full Paper (To Appear)</div>
+                    <div class="paper-authors">
+                        <strong>Tianqi Song</strong>, Black Sun, Jingshu Li, Han Li, Chi-Lan Yang, Yijia Xu, Yi-Chieh Lee
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="https://doi.org/10.1145/3706599.3720033" target="_blank" rel="noopener noreferrer">
+                            AI Literacy Education for Older Adults: Motivations, Challenges and Preferences
+                        </a>
+                    </div>
+                    <div class="paper-meta">CHI 2025 - Extended Abstract</div>
+                    <div class="paper-authors">
+                        Eugene Tang Kangjie, <strong>Tianqi Song</strong>, Zicheng Zhu, Jingshu Li, Yi-Chieh Lee
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-title">
+                        <a href="https://doi.org/10.1145/3613905.3650914" target="_blank" rel="noopener noreferrer">
+                            Mitigating Ageism through Virtual Reality: Intergenerational Collaborative Escape Room Design
+                        </a>
+                    </div>
+                    <div class="paper-meta">CHI 2024 - Extended Abstract</div>
+                    <div class="paper-authors">
+                        Ruotong Zou, Shuyu Yin, <strong>Tianqi Song</strong>, Peinuan Qin, Yi-Chieh Lee
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Future Directions</h2>
+            <div class="focus-areas">
+                <div class="focus-item">
+                    <div class="focus-title">Personalized AI Systems</div>
+                    <div class="focus-description">
+                        Developing AI that adapts to individual cognitive and physical capabilities across the lifespan.
+                    </div>
+                </div>
+
+                <div class="focus-item">
+                    <div class="focus-title">Safety & Trust</div>
+                    <div class="focus-description">
+                        Investigating how to build AI systems that older adults can trust and use safely.
+                    </div>
+                </div>
+
+                <div class="focus-item">
+                    <div class="focus-title">Community Integration</div>
+                    <div class="focus-description">
+                        Exploring how technology can strengthen social connections and reduce isolation in older adults.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
