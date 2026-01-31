@@ -149,6 +149,20 @@
       font-weight: 500;
     }
 
+    .paper-resource {
+      display: inline-block;
+      margin: 0.25rem 4px 0 0;
+      font-size: 0.8em;
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: all 0.1s ease;
+    }
+
+    .paper-resource:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
     .talk-list,
     .media-list {
       margin: 1rem 0;
@@ -216,6 +230,25 @@
       color: #37352F;
     }
 
+    .notion-quote {
+      border-left: 3px solid var(--accent-color);
+      background: rgba(212, 115, 94, 0.05);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.95em;
+      line-height: 1.7;
+      color: rgba(55, 53, 47, 0.8);
+      font-style: italic;
+    }
+
+    .notion-quote-attribution {
+      margin-top: 0.75rem;
+      font-size: 0.875em;
+      color: rgba(55, 53, 47, 0.65);
+      font-style: normal;
+      text-align: right;
+    }
+
     @media (max-width: 767.98px) {
       h1 {
         font-size: 2em;
@@ -238,10 +271,15 @@
 
     <h1>Social Influence of Multi-Agents</h1>
     <p class="hero-description">
-      Investigating how groups of AI agents exert social influence, shape opinions, and form collective dynamics
-      in human–AI interactions. This research explores the emergent social behaviors that arise when multiple AI
+      We investigate how groups of AI agents exert social influence, shape opinions, and form collective dynamics
+      in human-AI interactions. This research explores the emergent social behaviors that arise when multiple AI
       agents interact with humans, and how these dynamics can be designed to promote positive outcomes.
     </p>
+
+    <blockquote class="notion-quote">
+      If there is a hard, high wall and an egg that breaks against it, no matter how right the wall or how wrong the egg, I will stand on the side of the egg. Why? Because each of us is an egg, a unique soul enclosed in a fragile egg. Each of us is confronting a high wall. The high wall is the system which forces us to do the things we would not ordinarily see fit to do as individuals . . . We are all human beings, individuals, fragile eggs. We have no hope against the wall: it's too high, too dark, too cold. To fight the wall, we must join our souls together for warmth, strength. We must not let the system control us -- create who we are. It is we who created the system.
+      <div class="notion-quote-attribution">— Haruki Murakami, Jerusalem Prize acceptance speech, 2009</div>
+    </blockquote>
 
     <div class="section">
       <h2>Related Papers</h2>
@@ -257,8 +295,11 @@
           <div class="paper-authors">
             <strong>Tianqi Song</strong>†, Yugin Tan†, Zicheng Zhu, Yibin Feng, Yi-Chieh Lee
           </div>
-          <span class="paper-award">🏆 CSCW 2025 Methods Recognition</span>
+          <span class="paper-award">🌟 CSCW 2025 Methods Recognition</span>
           <span class="paper-award">🏆 ICA 2025 Top Paper Award</span>
+          <a href="https://docs.google.com/presentation/d/1QYZPs7SzxkU1EiWpJDh0kaIBLnn_qU9qiyOorE9yTqQ/edit?usp=sharing" class="paper-resource" target="_blank" rel="noopener noreferrer">[Slides]</a>
+<a href="https://medium.com/acm-cscw/multi-agents-are-social-groups-what-happens-when-we-interact-with-a-society-of-ai-279a27e07d30" class="paper-resource" target="_blank" rel="noopener noreferrer">[Medium]</a>
+
         </div>
 
         <div class="paper-item">
@@ -271,6 +312,7 @@
           <div class="paper-authors">
             <strong>Tianqi Song</strong>, Yugin Tan, Zicheng Zhu, Yibin Feng, Yi-Chieh Lee
           </div>
+          <a href="https://www.figma.com/design/QKqONPAFe4dSzRzYa1KonJ/Poster-Template?node-id=0-1&t=c28uXNJOa3BZJ5is-1" class="paper-resource" target="_blank" rel="noopener noreferrer">[Poster]</a>
         </div>
 
         <div class="paper-item">
@@ -306,6 +348,8 @@
             <strong>Tianqi Song</strong>, Yugin Tan, Zicheng Zhu, Yibin Feng, Yi-Chieh Lee
           </div>
           <span class="paper-award">🏆 Best Paper Award</span>
+          <a href="https://docs.google.com/presentation/d/1XdgLkD71N5KqLm0L8p257H3PlcVCySQaCNPX5Hreisw/edit?usp=sharing" class="paper-resource" target="_blank" rel="noopener noreferrer">[Slides]</a>
+
         </div>
 
         <div class="talk-item">
@@ -321,11 +365,13 @@
             <strong>Tianqi Song</strong>, Yugin Tan, Zicheng Zhu, Maojia Song, Yibin Feng, Yi-Chieh Lee
           </div>
           <span class="paper-award">🌟 Spotlight Talk</span>
+          <a href="https://docs.google.com/presentation/d/1KZEQuZ92pScO9OtwYDjjoLqiAetwObuC9GtM7ro1osM/edit?usp=sharing" class="paper-resource" target="_blank" rel="noopener noreferrer">[Slides]</a>
+
         </div>
 
         <div class="talk-item">
           <div class="talk-title">
-            Multi-Agent Social Influence Research
+            “The Whole” vs. the Sum of its Parts: Exploring Persuasive Nature of Multi-Agents
           </div>
           <div class="talk-meta">
             Summer Institute in Computational Social Science (SICSS-Singapore) 2024
@@ -346,6 +392,11 @@
             <a href="https://www.youtube.com/watch?v=Wj-sZZ1CffE" target="_blank" rel="noopener noreferrer">
               Multi-AI Agent Systems — Pure Social Manipulation
             </a> (Discover AI)
+          </li>
+           <li>
+            <a href="https://www.youtube.com/watch?v=9nbh7SmYS-A" target="_blank" rel="noopener noreferrer">
+              🚀 The Dark Side of AI Influence Can a Group of Bots Control Your Thoughts 😱💭
+            </a> (Agility AI)
           </li>
           <li>
             <a href="https://www.youtube.com/watch?v=EVy16V2Z0mI" target="_blank" rel="noopener noreferrer">
