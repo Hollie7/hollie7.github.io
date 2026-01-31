@@ -9,58 +9,64 @@
     <link rel="icon" href="image/me_icon.png" type="image/png">
     <title>Holly Tianqi Song | HCI research at NUS</title>
     <style>
+        :root {
+            --accent-color: #D4735E;
+            --accent-hover: #B85D48;
+            --accent-light: #E8957E;
+            --accent-bg: rgba(212, 115, 94, 0.1);
+        }
+
         body {
             margin-top: 20px;
             margin-bottom: 30px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             font-weight: 400;
-            color: #2C3E50;
+            color: #37352F;
             line-height: 1.6;
         }
 
         a {
-            color: #2C3E50;
-            border-bottom: 1px dotted #95A5A6;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            color: var(--accent-color);
+            text-decoration: underline;
+            text-decoration-color: rgba(212, 115, 94, 0.4);
+            transition: all 0.1s ease;
         }
 
         a:hover,
         a:active {
-            color: #E74C3C;
+            color: var(--accent-hover);
             text-decoration: none;
-            border-bottom-color: #E74C3C;
+            text-decoration-color: var(--accent-hover);
         }
 
         h1 a {
-            color: #34495E;
+            color: #37352F;
             border: none;
             font-weight: 500;
         }
 
         h1 a:hover {
-            color: #2C3E50;
+            color: #37352F;
         }
 
         h2 {
             font-size: 1.5em;
-            border-bottom: 2px solid #34495E;
-            padding-bottom: 8px;
-            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
             font-weight: 600;
-            color: #2C3E50;
+            color: #37352F;
         }
 
         h3 {
             font-size: 1.2em;
-            color: #000000;
+            color: #37352F;
         }
 
         h4 {
             font-size: 1em;
             font-family: sans-serif;
             font-weight: lighter;
-            color: #000000;
+            color: #37352F;
             margin-top: 10px;
             margin-bottom: 30px;
         }
@@ -74,21 +80,21 @@
         }
 
         h6 a {
-            color: #2C3E50;
-            border-bottom: none;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            color: #37352F;
+            text-decoration: underline;
+            text-decoration-color: rgba(212, 115, 94, 0.4);
+            transition: all 0.1s ease;
         }
 
         h6 a:hover {
-            color: #E74C3C;
-            text-decoration: none;
-            border-bottom: none;
+            color: var(--accent-color);
+            text-decoration-color: var(--accent-hover);
         }
 
         .strong {
-            color: #E74C3C;
+            color: var(--accent-color);
             font-weight: 500;
+            font-size: 0.875em;
             margin-top: 4px !important;
             margin-bottom: 0 !important;
         }
@@ -96,9 +102,21 @@
         /* Research Cards Section - Minimal Notion Style */
         .research-cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .research-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .research-cards-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
         }
 
         .research-card {
@@ -152,15 +170,15 @@
         }
 
         .research-card-title {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            color: #2C3E50;
+            color: #37352F;
             margin-bottom: 10px;
             line-height: 1.4;
         }
 
         .research-card-description {
-            font-size: 14px;
+            font-size: 13px;
             color: #6B7280;
             line-height: 1.6;
             margin-bottom: 16px;
@@ -176,10 +194,10 @@
         .research-card-tag {
             display: inline-block;
             padding: 3px 10px;
-            background: #F3F4F6;
+            background: rgba(55, 53, 47, 0.08);
             border: none;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 10px;
             color: #6B7280;
             font-weight: 500;
             transition: background 0.2s ease;
@@ -196,8 +214,9 @@
         }
 
         .strong {
-            color: #E74C3C;
+            color: var(--accent-color);
             font-weight: 500;
+            font-size: 0.875em;
             margin-top: 4px !important;
             margin-bottom: 0 !important;
         }
@@ -207,7 +226,7 @@
         }
 
         .venue-label {
-            color: #7F8C8D;
+            color: rgba(55, 53, 47, 0.65);
             font-size: 13px;
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -218,15 +237,15 @@
         }
 
         .text-muted {
-            color: #5D6D7E !important;
-            font-size: 14px;
+            color: rgba(55, 53, 47, 0.65) !important;
+            font-size: 0.9em;
             line-height: 1.5;
             margin-bottom: 4px !important;
             margin-top: 0 !important;
         }
 
         .text-muted strong {
-            color: #2C3E50;
+            color: rgba(55, 53, 47, 0.65);
             font-weight: 600;
         }
 
@@ -239,7 +258,7 @@
 
         .keywords-label {
             font-weight: 600;
-            color: #2C3E50;
+            color: #37352F;
             margin-right: 8px;
         }
 
@@ -248,23 +267,23 @@
         }
 
         .keyword-tag {
-            color: #2C3E50;
+            color: #37352F;
             cursor: pointer;
             transition: color 0.3s ease;
             padding: 0 2px;
         }
 
         .keyword-tag:hover {
-            color: #E74C3C;
+            color: var(--accent-color);
         }
 
         .keyword-tag.active {
-            color: #E74C3C;
+            color: var(--accent-color);
             font-weight: 600;
         }
 
         .keyword-separator {
-            color: #95A5A6;
+            color: rgba(55, 53, 47, 0.4);
             margin: 0 2px;
         }
 
@@ -280,8 +299,8 @@
         }
 
         .author-with-avatar:hover {
-            color: #E74C3C;
-            border-bottom: 1px dotted #E74C3C;
+            color: var(--accent-color);
+            border-bottom: 1px dotted var(--accent-color);
             /* 悬停时显示虚线 */
         }
 
@@ -325,14 +344,14 @@
 
         .avatar-card .name {
             font-weight: 600;
-            color: #2C3E50;
+            color: #37352F;
             font-size: 14px;
             margin-bottom: 4px;
         }
 
         .avatar-card .affiliation {
             font-size: 12px;
-            color: #7F8C8D;
+            color: rgba(55, 53, 47, 0.65);
             width: 150px;
         }
 
@@ -385,6 +404,8 @@
 
         img.portrait {
             max-width: 100%;
+            width: 100%;
+            object-fit: cover;
         }
 
         @media (max-width: 767.98px) {
@@ -442,7 +463,7 @@
 
         .news-date {
             font-weight: 600;
-            color: #2C3E50;
+            color: #37352F;
             margin-right: 4px;
         }
 
@@ -462,7 +483,7 @@
         }
 
         hr.dash {
-            border-top: 1px dashed #D5DBDB;
+            border-top: 1px dashed rgba(55, 53, 47, 0.09);
             margin-bottom: 12px;
             margin-top: 12px;
         }
@@ -499,7 +520,7 @@
         }
 
         .active .slider {
-            background-color: #E74C3C;
+            background-color: var(--accent-color);
         }
 
         .active .slider:before {
@@ -522,14 +543,14 @@
         }
 
         .alert-secondary h3 {
-            color: #34495E;
+            color: #37352F;
             font-size: 1.1em;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .alert-secondary div {
-            color: #5D6D7E;
+            color: rgba(55, 53, 47, 0.65);
             font-size: 14px;
             line-height: 1.6;
         }
@@ -542,6 +563,62 @@
         .news.compact li {
             margin-bottom: 2px;
         }
+
+        /* Fixed Header Styles */
+        header.container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 20px;
+            max-width: 100%;
+            margin: 0 auto;
+            box-shadow: none;
+        }
+
+        header.container.scrolled {
+            padding: 10px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header.container h1 {
+            font-size: 1.8em;
+            transition: font-size 0.3s ease;
+            margin: 0;
+        }
+
+        header.container.scrolled h1 {
+            font-size: 1.3em;
+        }
+
+        header.container ul.social-icons {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            margin-bottom: 0;
+            transition: all 0.3s ease;
+        }
+
+        header.container.scrolled ul.social-icons {
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+
+        header.container hr {
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+
+        /* Add padding to body to account for fixed header */
+        body {
+            padding-top: 120px;
+        }
+
+        body.header-scrolled {
+            padding-top: 80px;
+        }
     </style>
 </head>
 
@@ -552,10 +629,11 @@
             <a href="/">"Holly" Tianqi Song</a>
         </h1>
         <ul class="list-inline float-md-right social-icons">
-            <li class="list-inline-item"><a href="https://scholar.google.com/citations?user=RhxihiIAAAAJ&hl=en">Google
+            <li class="list-inline-item"><a href="https://scholar.google.com/citations?user=RhxihiIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google
                     Scholar</a></li>
-            <li class="list-inline-item"><a href="https://github.com/Hollie7">Github</a></li>
-            <li class="list-inline-item"><a href="https://x.com/song_holly77">Twitter</a></li>
+            <li class="list-inline-item"><a href="http://www.linkedin.com/in/holly-tianqi-song" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li class="list-inline-item"><a href="https://github.com/Hollie7" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li class="list-inline-item"><a href="https://x.com/song_holly77" target="_blank" rel="noopener noreferrer">Twitter</a></li>
             <li class="list-inline-item"><a class="email-anchor">Email</a></li>
         </ul>
         <div class="clearfix"></div>
@@ -564,11 +642,11 @@
 
     <div class="container">
         <div class="row mb-3">
-            <div class="col-xl-8 col-lg-9 col-md-8">
+            <div class="col-lg-8 col-md-7">
 
                 <p>
-                    I am “Holly” Tianqi Song (she/her), a PhD candidate in Computer Science at the National University
-                    of Singapore, advised by Prof.
+                    I am “Holly” Tianqi Song (she/her), a PhD candidate in Computer Science at the <a href="https://www.comp.nus.edu.sg/" target="_blank" rel="noopener noreferrer">National University
+                    of Singapore (NUS)</a>, advised by Prof.
                     <a href="https://sites.google.com/view/ai4sg/about" target="_blank" rel="noopener noreferrer">
                         Yi-Chieh (EJ) Lee
                     </a>.
@@ -586,26 +664,26 @@
 
                     <ul style="font-size: 14px; line-height: 1.6;">
                         <li>
-                            <strong>Human–AI co-existence and agent societies</strong>,
-                            investigating how groups of AI agents exert social influence, form norms,
-                            and acquire social roles relative to humans.
+                            <strong>Pillar 1: Human-AI Sociology:</strong>
+                            Investigating social mechanisms (e.g., social influence, social comparison) within interactions between humans and groups of AI agents, and designing AI-driven social simulation interventions to model social environments ("social vibes") and positively shape human attitudes and behaviors.
                         </li>
                         <li>
-                            <strong>Lifespan, aging, and human needs</strong>,
-                            focusing on AI literacy, emotional support, and how intelligent technologies
-                            can empower older adults and adapt to people’s needs across different life stages.
-                        </li>
-                        <li>
-                            <strong>Responsible AI design</strong>,
-                            exploring how AI systems can be designed to reduce social stigma and cultivate
-                            constructive social atmospheres (“social vibes”) in human–AI interaction.
+                            <strong>Pillar 2: Lifespan, Aging, and Temporality:</strong>
+                            Exploring whether AI systems can understand concepts of time, lifespan, and mortality, and examining how AI can provide tailored support for humans across different life stages, from youth to aging.
                         </li>
                     </ul>
+
+                     <p style="font-size: 13px; color: var(--accent-color); margin-top: 1rem;">
+                    If you are interested in research collaboration, feel free to <a href="#" class="email-anchor" style="color: var(--accent-color);">contact me</a>.
+                    <a id="toggle-student-note" href="#" style="font-size: 12px; color: rgba(55, 53, 47, 0.65);">More &gt;</a><span id="student-note" style="display: none; font-size: 12px; color: rgba(55, 53, 47, 0.65);"><br>
+                        (Note: If you are an undergraduate or master's student interested in research internships, please contact my supervisor <a href="https://sites.google.com/view/ai4sg/about" target="_blank" rel="noopener noreferrer" style="color: rgba(55, 53, 47, 0.65);">EJ</a> first!)
+                    </span>
+                </p>
                 </div>
 
 
                 <p>
-                    Prior to my PhD, I earned my bachelor’s degree in Computer Science and Technology from <a
+                    Prior to my PhD, I earned my master's degree from NUS and my bachelor's degree in Computer Science and Technology from <a
                         href="https://www.zju.edu.cn/english/" target="_blank">Zhejiang
                         University</a>,
                     along with an Honors Program in Humanities and Social Sciences at the
@@ -615,9 +693,8 @@
                 </p>
 
 
-
             </div>
-            <div class="offset-xl-1 col-lg-3 col-md-4">
+            <div class="col-lg-4 col-md-5">
                 <img src="image/me_portrait.png" class="portrait" alt="a portrait of tianqi song">
             </div>
         </div>
@@ -675,13 +752,13 @@
                         <span class="keyword-separator">|</span>
                         <span class="keyword-tag" data-keyword="multi-agent">Multi-Agent Social Influence</span>
                         <span class="keyword-separator">|</span>
-                        <span class="keyword-tag" data-keyword="mental-health">Mental Health & Stigma</span>
-                        <span class="keyword-separator">|</span>
                         <span class="keyword-tag" data-keyword="accessibility">Accessibility & Aging</span>
                         <span class="keyword-separator">|</span>
-                        <span class="keyword-tag" data-keyword="visualization">Data Visualization</span>
+                        <span class="keyword-tag" data-keyword="mental-health">Mental Health & Stigma</span>
                         <span class="keyword-separator">|</span>
-                        <span class="keyword-tag" data-keyword="human-ai">Human-AI Interaction</span>
+                        <span class="keyword-tag" data-keyword="visualization">Data Visualization</span>
+                        <!-- <span class="keyword-separator">|</span>
+                        <span class="keyword-tag" data-keyword="human-ai">Human-AI Interaction</span> -->
                     </span>
                 </div>
 
@@ -744,7 +821,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[CSCW 2025 - Full Paper]</div>
-                            <h6><a href="https://doi.org/10.1145/3757633">Multi-Agents are Social Groups: Investigating
+                            <h6><a href="https://doi.org/10.1145/3757633" target="_blank" rel="noopener noreferrer">Multi-Agents are Social Groups: Investigating
                                     Social Influence of Multiple Agents in Human-Agent Interactions</a></h6>
                             <p class="text-muted">
                                 <strong>Tianqi Song</strong>†, <span class="author-link" data-author="yugin"></span>†,
@@ -770,7 +847,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[CSCW 2025 - Full Paper]</div>
-                            <h6><a href="https://doi.org/10.1145/3710987">From Interaction to Attitude: Exploring the
+                            <h6><a href="https://doi.org/10.1145/3710987" target="_blank" rel="noopener noreferrer">From Interaction to Attitude: Exploring the
                                     Impact of Human-AI Cooperation on Mental Illness Stigma</a></h6>
                             <p class="text-muted">
                                 <strong>Tianqi Song</strong>, <span class="author-link" data-author="jack"></span>,
@@ -792,7 +869,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[IJHCS 2025 - Full Paper]</div>
-                            <h6><a href="https://doi.org/10.1016/j.ijhcs.2025.103455">Confronting Verbalized
+                            <h6><a href="https://doi.org/10.1016/j.ijhcs.2025.103455" target="_blank" rel="noopener noreferrer">Confronting Verbalized
                                     Uncertainty: Understanding How LLM's Verbalized Uncertainty Influences Users in
                                     AI-Assisted Decision-Making</a></h6>
                             <p class="text-muted">
@@ -825,7 +902,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[CHI 2025 - Extended Abstract]</div>
-                            <h6><a href="https://doi.org/10.1145/3706599.3719973">Greater than the Sum of its Parts:
+                            <h6><a href="https://doi.org/10.1145/3706599.3719973" target="_blank" rel="noopener noreferrer">Greater than the Sum of its Parts:
                                     Exploring Social Influence of Multi-Agents</a></h6>
                             <p class="text-muted">
                                 <strong>Tianqi Song</strong>, <span class="author-link" data-author="yugin"></span>,
@@ -847,7 +924,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[CSCW 2025 - Companion]</div>
-                            <h6><a href="https://doi.org/10.1145/3715070.3749246">Multi-Agent Systems Shape Social Norms
+                            <h6><a href="https://doi.org/10.1145/3715070.3749246" target="_blank" rel="noopener noreferrer">Multi-Agent Systems Shape Social Norms
                                     for Prosocial Behavior Change</a></h6>
                             <p class="text-muted">
                                 <span class="author-link" data-author="yibin"></span>, <strong>Tianqi Song</strong>,
@@ -870,7 +947,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[ICLR 2025 Workshop - Human-AI Coevolution]</div>
-                            <h6><a href="https://openreview.net/forum?id=6zlttMWe4G">The More, The Stronger?
+                            <h6><a href="https://openreview.net/forum?id=6zlttMWe4G" target="_blank" rel="noopener noreferrer">The More, The Stronger?
                                     Investigating How Multi-Agent AI Shapes Human Opinions</a></h6>
                             <p class="text-muted">
                                 <strong>Tianqi Song</strong>, <span class="author-link" data-author="yugin"></span>,
@@ -905,7 +982,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[CHI 2025 - Extended Abstract]</div>
-                            <h6><a href="https://doi.org/10.1145/3706599.3720033">AI Literacy Education for Older
+                            <h6><a href="https://doi.org/10.1145/3706599.3720033" target="_blank" rel="noopener noreferrer">AI Literacy Education for Older
                                     Adults: Motivations, Challenges and Preferences</a></h6>
                             <p class="text-muted">
                                 <span class="author-link" data-author="eugene"></span>, <strong>Tianqi Song</strong>,
@@ -928,7 +1005,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[CHI 2024 - Extended Abstract]</div>
-                            <h6><a href="https://doi.org/10.1145/3613905.3650914">Mitigating Ageism through Virtual
+                            <h6><a href="https://doi.org/10.1145/3613905.3650914" target="_blank" rel="noopener noreferrer">Mitigating Ageism through Virtual
                                     Reality: Intergenerational Collaborative Escape Room Design</a></h6>
                             <p class="text-muted">
                                 <span class="author-link" data-author="ruotong"></span>, Shuyu Yin, <strong>Tianqi
@@ -958,7 +1035,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[IEEE TVCG 2023 - Full Paper]</div>
-                            <h6><a href="https://doi.org/10.1109/TVCG.2023.3327376">Causality-Based Visual Analysis of
+                            <h6><a href="https://doi.org/10.1109/TVCG.2023.3327376" target="_blank" rel="noopener noreferrer">Causality-Based Visual Analysis of
                                     Questionnaire Responses</a></h6>
                             <p class="text-muted">
                                 Renzhong Li, Weiwei Cui, <strong>Tianqi Song</strong>, Xiao Xie, Rui Ding, Yun Wang,
@@ -979,7 +1056,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="venue-label">[Journal of Intelligence 2022 - Full Paper]</div>
-                            <h6><a href="https://doi.org/10.3390/jintelligence10040103">WikiLink: An Encyclopedia-Based
+                            <h6><a href="https://doi.org/10.3390/jintelligence10040103" target="_blank" rel="noopener noreferrer">WikiLink: An Encyclopedia-Based
                                     Semantic Network for Design Creativity</a></h6>
                             <p class="text-muted">
                                 <span class="author-link" data-author="haoyu"></span>, Qianzhi Jing, <strong>Tianqi Song</strong>, Lingyun Sun, Peter Childs,
@@ -1001,32 +1078,32 @@
 
                 <h2>Latest News</h2>
                 <ul class="news" style="font-size: 13px">
-                    <li><span class="news-date">2025 Dec</span> - Our paper received Best Paper Award from <a
-                            href="https://multiagents.org/2026/">AAAI WAIC</a>!</li>
+                    <li><span class="news-date">2025 Dec</span> - Our paper received <a
+                            href="https://multiagents.org/2026/" target="_blank" rel="noopener noreferrer">Best Paper Award</a> from AAAI WAIC!</li>
                     <li><span class="news-date">2025 Oct</span> - I attended CSCW 🇳🇴 and presented our two papers on
                         social stigma and multi-agent.</li>
                     <li><span class="news-date">2025 Oct</span> - Our paper received <a
-                            href="https://medium.com/acm-cscw/announcing-the-best-of-cscw-2025-a95517e67ba3">Methods
+                            href="https://medium.com/acm-cscw/announcing-the-best-of-cscw-2025-a95517e67ba3" target="_blank" rel="noopener noreferrer">Methods
                             Recognition</a> from CSCW.</li>
                     <li><span class="news-date">2025 Aug</span> - Our research on multi-agent was recently featured by
                         <a
-                            href="https://www.comp.nus.edu.sg/features/when-ai-talks-in-groups-how-multi-agent-systems-may-be-shaping-your-opinions/">NUS
+                            href="https://www.comp.nus.edu.sg/features/when-ai-talks-in-groups-how-multi-agent-systems-may-be-shaping-your-opinions/" target="_blank" rel="noopener noreferrer">NUS
                             School of Computing</a>.
                     </li>
                     <li><span class="news-date">2025 Jun</span> - I served as <a
-                            href="https://ichec.icachi.org/25/committee/">Publicity Chair</a> for ICHEC 2025!</li>
+                            href="https://ichec.icachi.org/25/committee/" target="_blank" rel="noopener noreferrer">Publicity Chair</a> for ICHEC 2025!</li>
                     <li><span class="news-date">2025 Jun</span> - I passed QE and became a PhD candidate.</li>
                 </ul>
                 <ul class="news" id="news-more" style="font-size: 13px">
                     <li><span class="news-date">2025 May</span> - I attended ICLR 🇸🇬 & CHI 🇯🇵 and presented our work
                         on multi-agent & social influence.</li>
                     <li><span class="news-date">2025 Feb</span> - Our paper received <a
-                            href="https://www.linkedin.com/posts/nuscomputing_phd-student-song-tianqi-received-the-top-activity-7346485361092567042-Nui5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6hh9kBrXorEJuxwrfgRQen4tPv8u-yIUQ">Top
+                            href="https://www.linkedin.com/posts/nuscomputing_phd-student-song-tianqi-received-the-top-activity-7346485361092567042-Nui5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6hh9kBrXorEJuxwrfgRQen4tPv8u-yIUQ" target="_blank" rel="noopener noreferrer">Top
                             Paper Award</a> in the 75th ICA Conference (HMC division)!</li>
                     <li><span class="news-date">2024 Oct</span> - My first HCI paper has been accepted to CSCW 2025!
                         Many thanks to my amazing collaborators for making this possible.</li>
                     <li><span class="news-date">2024 Jun</span> - I attended <a
-                            href="https://sicss.io/2024/singapore/people">SICSS-Singapore</a> and presented our work on
+                            href="https://sicss.io/2024/singapore/people" target="_blank" rel="noopener noreferrer">SICSS-Singapore</a> and presented our work on
                         multi-agent & social influence.</li>
                     <li><span class="news-date">2024 Jan</span> - I started PhD at NUS</li>
                 </ul>
@@ -1074,7 +1151,7 @@
                     <strong>Teaching Assistants</strong>
                 </p>
                 <ul class="news compact" style="font-size: 13px;">
-                    <li>IT5001 | 2025 Fall, 2024 Fall, 2024 Spring, 2023 Fall</li>
+                    <li><a href="https://nusmods.com/courses/IT5001/software-development-fundamentals" target="_blank" rel="noopener noreferrer">IT5001</a> | 2025 Fall, 2024 Fall, 2024 Spring, 2023 Fall</li>
                     <li><a href="https://cs3249.ai4sg.org/" target="_blank" rel="noopener noreferrer">
                             CS3249
                         </a> | 2025 Fall</li>
@@ -1114,14 +1191,14 @@
                 <h2>Media Coverage</h2>
                 <ul class="news" style="font-size: 13px">
                     <li><a href="https://www.comp.nus.edu.sg/bytes/phd-student-tianqi-song-receives-methods-recognitions-at-cscw-2025/"
-                            target="_blank">NUS Computing Bytes</a> - Method Recognition at CSCW 2025</li>
+                            target="_blank" rel="noopener noreferrer">NUS Computing Bytes</a> - Method Recognition at CSCW 2025</li>
                     <li><a href="https://www.comp.nus.edu.sg/bytes/phd-student-song-tianqi-received-the-top-paper-award-at-the-75th-annual-ica-conference/"
-                            target="_blank">NUS Computing Bytes</a> - Top Paper Award at ICA 2025</li>
+                            target="_blank" rel="noopener noreferrer">NUS Computing Bytes</a> - Top Paper Award at ICA 2025</li>
                     <li><a href="https://www.comp.nus.edu.sg/features/when-ai-talks-in-groups-how-multi-agent-systems-may-be-shaping-your-opinions/"
-                            target="_blank">NUS Computing Feature</a> - Multi-Agent Systems & Opinion Formation</li>
-                    <li><a href="https://www.youtube.com/watch?v=Wj-sZZ1CffE" target="_blank">Discover AI (YouTube)</a>
+                            target="_blank" rel="noopener noreferrer">NUS Computing Feature</a> - Multi-Agent Systems & Opinion Formation</li>
+                    <li><a href="https://www.youtube.com/watch?v=Wj-sZZ1CffE" target="_blank" rel="noopener noreferrer">Discover AI (YouTube)</a>
                         - Social Manipulation by Design</li>
-                    <li><a href="https://www.youtube.com/watch?v=EVy16V2Z0mI" target="_blank">Root Access (YouTube)</a>
+                    <li><a href="https://www.youtube.com/watch?v=EVy16V2Z0mI" target="_blank" rel="noopener noreferrer">Root Access (YouTube)</a>
                         - Interview on Multi-Agent Systems</li>
                 </ul>
 
@@ -1137,7 +1214,7 @@
 
 
                 <div class="mt-3 tweets">
-                    <a class="twitter-timeline" width="100%" height="1800" href="https://twitter.com/song_holly77">
+                    <a class="twitter-timeline" width="100%" height="1800" href="https://twitter.com/song_holly77" target="_blank" rel="noopener noreferrer">
                         Tweets by Holly Song
                     </a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -1367,8 +1444,14 @@
 
     // Toggle more news
     $('#toggle-more-news').click(function () {
-        $('#news-more').slideToggle();
-        $('#news-more').is(':visible') ? $(this).text('< Hide') : $(this).text('More >');
+        var $this = $(this);
+        $('#news-more').slideToggle(300, function() {
+            if ($(this).is(':visible')) {
+                $this.text('< Hide');
+            } else {
+                $this.text('More >');
+            }
+        });
         return false;
     });
 
@@ -1477,10 +1560,43 @@
 </script>
 <script>
     $('#toggle-research').click(function () {
-        $('#research-details').slideToggle();
-        $('#research-details').is(':visible')
-            ? $(this).text('< Hide')
-            : $(this).text('More >');
+        var $this = $(this);
+        $('#research-details').slideToggle(300, function() {
+            if ($(this).is(':visible')) {
+                $this.text('< Hide');
+            } else {
+                $this.text('More >');
+            }
+        });
+        return false;
+    });
+</script>
+
+<script>
+    // Fixed header on scroll
+    $(window).on('scroll', function() {
+        const header = $('header.container');
+        const scrollPosition = $(window).scrollTop();
+
+        if (scrollPosition > 50) {
+            header.addClass('scrolled');
+            $('body').addClass('header-scrolled');
+        } else {
+            header.removeClass('scrolled');
+            $('body').removeClass('header-scrolled');
+        }
+    });
+
+    // Toggle student note
+    $('#toggle-student-note').click(function() {
+        var $this = $(this);
+        $('#student-note').slideToggle(300, function() {
+            if ($(this).is(':visible')) {
+                $this.text('< Hide');
+            } else {
+                $this.text('More >');
+            }
+        });
         return false;
     });
 </script>
