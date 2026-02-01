@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7/css/all.min.css">
+  <link rel="icon" href="../image/me_icon.png" type="image/png">
+  <title>ICLR and CHI: Where is the Future of Humans and AI Heading | Holly Tianqi Song</title>
+  <style>
+    :root {
+      --accent-color: #D4735E;
+      --accent-hover: #B85D48;
+      --accent-light: #E8957E;
+      --accent-bg: rgba(212, 115, 94, 0.1);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+      color: #37352F;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: underline;
+      text-decoration-color: rgba(212, 115, 94, 0.4);
+      transition: all 0.1s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration-color: var(--accent-hover);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #37352F;
+      margin: 1rem 0 0.5rem 0;
+      line-height: 1.2;
+    }
+
+    h1 a {
+      color: #37352F;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    h1 a:hover {
+      color: #37352F;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #37352F;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.15em;
+      font-weight: 600;
+      color: #37352F;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-meta {
+      font-size: 0.875em;
+      color: rgba(55, 53, 47, 0.65);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
+
+    .blog-date {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Fixed Header Styles */
+    header.container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      padding: 20px;
+      max-width: 100%;
+      margin: 0 auto;
+      box-shadow: none;
+    }
+
+    header.container.scrolled {
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header.container h1 {
+      font-size: 1.8em;
+      transition: font-size 0.3s ease;
+      margin: 0;
+    }
+
+    header.container.scrolled h1 {
+      font-size: 1.3em;
+    }
+
+    ul.nav-links {
+      font-size: 0.9rem;
+      margin-top: 8px;
+      margin-bottom: 0;
+      list-style: none;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    header.container.scrolled ul.nav-links {
+      font-size: 0.75rem;
+      margin-top: 4px;
+    }
+
+    ul.nav-links li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    ul.nav-links li::before {
+      content: '[';
+    }
+
+    ul.nav-links li::after {
+      content: ']';
+    }
+
+    ul.nav-links li a {
+      text-decoration: none;
+    }
+
+    header.container hr {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    /* Add padding to body to account for fixed header */
+    body {
+      padding-top: 120px;
+    }
+
+    body.header-scrolled {
+      padding-top: 80px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      padding: 4px 8px;
+      font-size: 14px;
+      color: rgba(55, 53, 47, 0.65);
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.1s ease;
+    }
+
+    .back-link:hover {
+      background: rgba(55, 53, 47, 0.08);
+    }
+
+    .back-link i {
+      font-size: 12px;
+    }
+
+    .blog-content {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #37352F;
+    }
+
+    .blog-content p {
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-content strong {
+      font-weight: 600;
+      color: #37352F;
+    }
+
+    @media (max-width: 767.98px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .container {
+        padding: 40px 20px;
+      }
+
+      .blog-content {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="container">
+    <h1 class="float-md-left mb-0">
+      <a href="../index.html">"Holly" Tianqi Song</a>
+    </h1>
+    <ul class="list-inline float-md-right nav-links">
+      <li class="list-inline-item"><a href="../blog.html">Blog</a></li>
+      <li class="list-inline-item"><a href="../design.html">Design</a></li>
+      <li class="list-inline-item"><a href="../contact-me.html">Contact Me</a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <hr>
+  </header>
+
+  <div class="container">
+    <a href="../blog.html" class="back-link">
+      <i class="fas fa-arrow-left"></i>
+      Back to Blog
+    </a>
+
+    <h1>ICLR and CHI: Where is the Future of Humans and AI Heading</h1>
+
+    <div class="blog-meta">
+      <div class="blog-date">May 2, 2025</div>
+    </div>
+
+    <div class="blog-content">
+      <p>
+        This year, I had the wonderful opportunity to participate in two consecutive academic conferences: ICLR in Singapore from April 24-27, and CHI in Yokohama, Japan from April 28 to May 1.
+      </p>
+
+      <p>
+        First, I must humbly clarify that I didn't have a full paper at either conference. I mainly went to participate in workshops and present posters. So rather than a participant, I was more like an observer. I'd like to share my observations on the differences in content style and my feelings at these two top conferences in different fields.
+      </p>
+
+      <h3>Direct Impressions - Economic Value vs. Emotional Value</h3>
+      <p>
+        ICLR is like a large, sparse network, with each venue hosting thousands of people. As an attendee, it's impossible to see all the content you're interested in within the limited time. Viewing posters and listening to talks at ICLR gave me a strong sense of being an NPC—there were too many people. The proportion of introverts among presenters seems very high. Some students became visibly uncomfortable after presenting their posters and couldn't wait to leave.
+      </p>
+
+      <p>
+        In comparison, CHI is smaller and more beautiful, with no large venues. Each talk is in a small room with dozens of people, offering strong engagement and interaction. The proportion of extroverts at CHI is noticeably higher—people can chat about anything and everything. Many students even brought souvenirs from their schools or labs to exchange, which was very warm. (What's the difference between a comic con?)
+      </p>
+
+      <p>
+        From an economic value and return perspective, the number and level of sponsors at ICLR compared to CHI is like heaven and earth. The company booths at ICLR are very high quality. As an ordinary student "working on agents," I could walk around ICLR and collect countless HR contacts, hearing "we have a team working on this direction, send us your resume" over and over. Of course, whether you can actually match is another matter, but at least the AI field provides many publicly accessible entry points.
+      </p>
+
+      <p>
+        Such entry points are scarce at CHI. Although CHI's sponsorship this year was already very good compared to previous years—besides the regulars Apple, Google, Meta, and Microsoft, many Japanese companies sponsored generously (NTT, Sony, Yokohama City Government)—the total number is still small. Domestic tech companies are even rarer; so far I've only seen Huawei's booth. Similarly, as an ordinary student "working on agents," after visiting every booth, I gained nothing beyond some polite socializing. I even wondered, do these companies really hire people? Or is this just an advertising space they bought?
+      </p>
+
+      <p>
+        This isn't surprising, since HCI itself is very un-profitable. The more minority and niche your focus, the more it deserves recognition. Correspondingly, there are fewer HCI industry positions, few tech companies direct their promotional attention to this field—only tech giants that aren't short on money will spend this advertising fee.
+      </p>
+
+      <hr style="border: none; border-top: 1px solid rgba(55, 53, 47, 0.09); margin: 2.5rem 0;">
+
+      <h2>
+        What kind of research should we do? A SOTA competition or blind night running?
+      </h2>
+
+      <h3>Homogenization and Imagination</h3>
+      <p>
+        AI research content seems to homogenize easily. Looking at agent-related research, you can almost paint a picture of everyone's life: multi-agents playing board games, agents playing bridge, agent game theory, AI scientists (The research topic you do reflects your life state...)
+      </p>
+
+      <p>
+        In contrast, CHI topics: meditation assistants, outdoor assistants, AI mental therapy, AI-assisted creation. Sometimes reading HCI papers feels like—this can also be researched?
+      </p>
+
+      <h3>The Meaningless Spiral</h3>
+      <p>
+        Any research involving human value is difficult to evaluate—you can hardly say that research on visually impaired groups is deeper than research on depressed groups, or that research solving elderly companionship is more meaningful than childhood autism.
+      </p>
+
+      <p>
+        But for technology-oriented papers, comparison is necessary. In fact, because comparison is so direct, every AI researcher must painfully face the eternal question of "is my method better than others," "if I can't beat others, is my research garbage."
+      </p>
+
+      <p>
+        The "difficult to evaluate" point is reflected in both sides' evaluation/award mechanisms. CHI has 50 best papers a year and 250 best nominations. ICLR has only 3 best papers and 3 best nominations. Even if you're in the top 1% of ICLR research, you can only get an oral opportunity; but at CHI, all accepted full papers can be oral (100%).
+      </p>
+
+      <h2>But Where Should Humanity Go</h2>
+
+      <h3>Augmentation or Replacement?</h3>
+      <p>
+        Should AI augment or replace humans? In slogans, everyone can reach a moderate consensus, but in terms of path, the two fields are making completely different attempts: The AI field says, of course we should replace. The HCI field says, of course we should augment.
+      </p>
+
+      <!-- <p>
+        The mainstream concept in HCI is augment human (AH), especially led by MIT Media Lab's AH lab.
+      </p>
+
+      <p>
+        The mainstream concept in AI is simulate human.
+      </p> -->
+
+      <p>
+        Although everyone is still trying, whether AI ultimately replaces or augments may be related to the task. If it's a task that can directly create economic value in the market, it will inevitably move toward "AI replacement" (such as AI programming, AI data analysis, AI customer service). Otherwise, at least in the short term, you can focus on "AI augmentation" (such as emotional companionship, parent-child relationships, education).
+      </p>
+
+      <p>
+        AI is neither necessarily auxiliary nor necessarily replacement. Staying in one field for too long creates some mental inertia, treating results as objectives.
+      </p>
+
+      <hr style="border: none; border-top: 1px solid rgba(55, 53, 47, 0.09); margin: 2.5rem 0;">
+
+      <h3>Off-cut</h3>
+      <p>
+        On the first day of ICLR, Professor <a href="https://iclr.cc/virtual/2025/invited-talk/36781" target="_blank" rel="noopener noreferrer">Zhu Songchun</a>'s "tong tong tong (通通通)" and "AGI" was indeed eye-opening. But he mentioned something: "Many humanities and social science scholars have a special obsession with human intelligence value, thinking that humans are different from other creatures." He found this idea absurd: all natural organisms, once born, can be simulated.
+      </p>
+
+      <p>
+        I know that in CHI and the broader social science field, "human value" is an inviolable issue. This is not an objective fact, but a stance—because we are carbon-based human beings, we must put human value and uniqueness first. Nevertheless, this human-centered idea is not universally recognized. The faster technology develops in a field, the less people treat humans as unique, but rather as objects that can be statistically calculated and simulated. I vaguely feel that Human-centered and technology development are not mutually reinforcing, but mutually constraining. If you care too much about Human-centered, then don't pursue technology development.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+  <script>
+    // Fixed header on scroll
+    $(window).on('scroll', function() {
+      const header = $('header.container');
+      const scrollPosition = $(window).scrollTop();
+
+      if (scrollPosition > 50) {
+        header.addClass('scrolled');
+        $('body').addClass('header-scrolled');
+      } else {
+        header.removeClass('scrolled');
+        $('body').removeClass('header-scrolled');
+      }
+    });
+  </script>
+</body>
+
+</html>

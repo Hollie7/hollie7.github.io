@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7/css/all.min.css">
+  <link rel="icon" href="../image/me_icon.png" type="image/png">
+  <title>A Small Experience on PhD Application | Holly Tianqi Song</title>
+  <style>
+    :root {
+      --accent-color: #D4735E;
+      --accent-hover: #B85D48;
+      --accent-light: #E8957E;
+      --accent-bg: rgba(212, 115, 94, 0.1);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+      color: #37352F;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: underline;
+      text-decoration-color: rgba(212, 115, 94, 0.4);
+      transition: all 0.1s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration-color: var(--accent-hover);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #37352F;
+      margin: 1rem 0 0.5rem 0;
+      line-height: 1.2;
+    }
+
+    h1 a {
+      color: #37352F;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    h1 a:hover {
+      color: #37352F;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #37352F;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.15em;
+      font-weight: 600;
+      color: #37352F;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-meta {
+      font-size: 0.875em;
+      color: rgba(55, 53, 47, 0.65);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
+
+    .blog-date {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Fixed Header Styles */
+    header.container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      padding: 20px;
+      max-width: 100%;
+      margin: 0 auto;
+      box-shadow: none;
+    }
+
+    header.container.scrolled {
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header.container h1 {
+      font-size: 1.8em;
+      transition: font-size 0.3s ease;
+      margin: 0;
+    }
+
+    header.container.scrolled h1 {
+      font-size: 1.3em;
+    }
+
+    ul.nav-links {
+      font-size: 0.9rem;
+      margin-top: 8px;
+      margin-bottom: 0;
+      list-style: none;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    header.container.scrolled ul.nav-links {
+      font-size: 0.75rem;
+      margin-top: 4px;
+    }
+
+    ul.nav-links li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    ul.nav-links li::before {
+      content: '[';
+    }
+
+    ul.nav-links li::after {
+      content: ']';
+    }
+
+    ul.nav-links li a {
+      text-decoration: none;
+    }
+
+    header.container hr {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    /* Add padding to body to account for fixed header */
+    body {
+      padding-top: 120px;
+    }
+
+    body.header-scrolled {
+      padding-top: 80px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      padding: 4px 8px;
+      font-size: 14px;
+      color: rgba(55, 53, 47, 0.65);
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.1s ease;
+    }
+
+    .back-link:hover {
+      background: rgba(55, 53, 47, 0.08);
+    }
+
+    .back-link i {
+      font-size: 12px;
+    }
+
+    .blog-content {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #37352F;
+    }
+
+    .blog-content p {
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-content strong {
+      font-weight: 600;
+      color: #37352F;
+    }
+
+    @media (max-width: 767.98px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .container {
+        padding: 40px 20px;
+      }
+
+      .blog-content {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="container">
+    <h1 class="float-md-left mb-0">
+      <a href="../index.html">"Holly" Tianqi Song</a>
+    </h1>
+    <ul class="list-inline float-md-right nav-links">
+      <li class="list-inline-item"><a href="../blog.html">Blog</a></li>
+      <li class="list-inline-item"><a href="../design.html">Design</a></li>
+      <li class="list-inline-item"><a href="../contact-me.html">Contact Me</a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <hr>
+  </header>
+
+  <div class="container">
+    <a href="../blog.html" class="back-link">
+      <i class="fas fa-arrow-left"></i>
+      Back to Blog
+    </a>
+
+    <h1>A Small Experience on PhD Application</h1>
+
+    <div class="blog-meta">
+      <div class="blog-date">June 13, 2024</div>
+    </div>
+
+    <div class="blog-content">
+      <p>
+        Since last semester, I have received consultation emails from some junior students, most of whom want to first do a summer internship/on-site exchange, and then prepare for PhD applications. The common concerns are: whether there are opportunities for independent research, the frequency of interaction with professors, and the lab's PhD positions/admission requirements for the next year.
+      </p>
+
+      <p>
+        The questions from my juniors reminded me of my own situation - during the summer of my junior year, I also followed the trend and applied for summer research opportunities in Hong Kong and Singapore, although I hadn't figured out what I wanted to do/what results I wanted to achieve at that time, so it was completely random, and it eventually fell through due to the pandemic.
+      </p>
+
+      <p>
+        After answering several juniors' questions + combining my own experience, I found some common questions that might provide some insights for students who are looking for summer research/want to apply for PhDs in Hong Kong and Singapore:
+      </p>
+
+      <h3>Question 1: Is overseas summer research really necessary for PhD applications?</h3>
+      <p>
+        From my personal statistics, these two things are actually "neither sufficient nor necessary". Currently, half of the mainland Chinese students in the lab had no overseas internship/exchange experience before entering the PhD program, and they were also admitted with good backgrounds (high GPA/first-author papers at top conferences). Of course, this "not sufficient and not necessary" is also related to the school's strong committee system. Some professors with strong faculty will require "only recruiting PhD students with collaborative experience", and such situations cannot be generalized.
+      </p>
+
+      <h3>Question 2: What's the use of summer research?</h3>
+      <p>
+        For students with good undergraduate backgrounds + wanting to apply for PhDs in Hong Kong and Singapore, if your background is very outstanding, then from purely an application perspective, you actually won't gain much from simply "having on-site summer research/exchange" experience, it's more about experiencing life. But if your background is not particularly outstanding, then an "effective" collaborative experience can help you turn the tables during the application stage (provided that you make full use of this time, have output/have sufficient communication with professors).
+      </p>
+
+      <h3>Question 3: What should be considered when applying for overseas summer research?</h3>
+      <p>
+        For this, I found that many students overlook the "location issue". After the pandemic, most labs expect or prioritize students who can intern on-site. If you can go on-site immediately, congratulations, your chances of getting your desired summer research (cheap labor) opportunity are very high. But conversely, if you can only work remotely, you need a more competitive resume to impress the other party.
+      </p>
+
+      <h3>Question 4: Will the lab provide salary?</h3>
+      <p>
+        Following the previous question, almost every junior student will hopefully ask "if I'm on-site, will the professor fund me", and unfortunately, 99% of the time the answer is no... Even if you see a lab's homepage clearly stating "hiring paid interns", the target audience for this position is most likely not undergraduate summer research students, but experienced master's/PhD students or even working professionals. Of course, if an undergraduate student's background is very strong, professors may be willing to fund you to come on-site (but this goes back to question two, those who need this experience are often students whose backgrounds are not so strong). In this case, everyone should consider either self-funding or seeking other funding sources, such as NGNE/CSC/school exchange funding programs.
+      </p>
+
+      <h3>Question 5: Is self-funded summer research worth it?</h3>
+      <p>
+        This is a very subjective question based on personal circumstances, but it is often discussed. If you simultaneously meet 1. Determined to pursue a PhD, 2. Care about the cost-effectiveness of studying abroad, 3. Background is not particularly outstanding - these three conditions, then self-funded summer research is <strong>super cost-effective</strong>, because if you don't do this, you will most likely have to go for a master's first, and the time and money spent will definitely be higher. Conversely, if any of the above conditions are not met, self-funded summer research is not very cost-effective, and you might as well go for a master's first and plan slowly.
+      </p>
+
+      <p style="margin-top: 2rem;">
+        The above questions are not only encountered by many juniors, but I also encountered them two years ago. I remember when reading the study abroad handbook, I found that there were really many students who turned the tables through summer research, but of course, there were more students like me who honestly went for a master's first and then applied for a PhD. So if big data can push this, I hope every junior student can find suitable opportunities, don't rush, take your time~
+      </p>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+  <script>
+    // Fixed header on scroll
+    $(window).on('scroll', function() {
+      const header = $('header.container');
+      const scrollPosition = $(window).scrollTop();
+
+      if (scrollPosition > 50) {
+        header.addClass('scrolled');
+        $('body').addClass('header-scrolled');
+      } else {
+        header.removeClass('scrolled');
+        $('body').removeClass('header-scrolled');
+      }
+    });
+  </script>
+</body>
+
+</html>
