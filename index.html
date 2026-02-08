@@ -408,16 +408,19 @@
         }
 
         img.portrait {
-            max-width: 100%;
-            width: 100%;
+            max-width: 80%;
+            width: 80%;
             object-fit: cover;
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            display: block;
+            margin: 0 auto;
         }
 
         @media (max-width: 767.98px) {
             img.portrait {
-                display: block;
-                max-width: 300px;
-                margin: auto;
+                max-width: 220px;
+                width: 220px;
             }
         }
 
@@ -719,22 +722,6 @@
                 <!-- NEW RESEARCH SECTION -->
                 <h2>Research Highlights</h2>
                 <div class="research-cards-grid">
-                    <a href="research/highlight-projects/social-influence.html" class="research-card">
-                        <div class="research-card-icon">
-                            <img src="image/research/social-influence-grid.png" alt="Social Influence">
-                        </div>
-                        <div class="research-card-content">
-                            <h6 class="research-card-title">Social Influence of Multi-Agents</h3>
-                            <p class="research-card-description">
-                                Investigating how groups of AI agents exert social influence, shape opinions, and form collective dynamics in human–AI interactions.
-                            </p>
-                            <div class="research-card-meta">
-                                <span class="research-card-tag">Multi-Agent AI</span>
-                                <span class="research-card-tag">Social Influence</span>
-                                <span class="research-card-tag">Group Dynamics</span>
-                            </div>
-                        </div>
-                    </a>
 
                     <a href="research/highlight-projects/aging-accessibility.html" class="research-card">
                         <div class="research-card-icon">
@@ -752,6 +739,24 @@
                             </div>
                         </div>
                     </a>
+
+                     <a href="research/highlight-projects/social-influence.html" class="research-card">
+                        <div class="research-card-icon">
+                            <img src="image/research/social-influence-grid.png" alt="Social Influence">
+                        </div>
+                        <div class="research-card-content">
+                            <h6 class="research-card-title">Social Influence of Multi-Agents</h3>
+                            <p class="research-card-description">
+                                Investigating how groups of AI agents exert social influence, shape opinions, and form collective dynamics in human–AI interactions.
+                            </p>
+                            <div class="research-card-meta">
+                                <span class="research-card-tag">Multi-Agent AI</span>
+                                <span class="research-card-tag">Social Influence</span>
+                                <span class="research-card-tag">Group Dynamics</span>
+                            </div>
+                        </div>
+                    </a>
+                    
                 </div>
 
 
@@ -1091,6 +1096,10 @@
 
                 <h2>Latest News</h2>
                 <ul class="news" style="font-size: 13px">
+                    <li>
+                    <span class="news-date">2026 Jan</span> – I was honored to represent NUS SoC in presenting our multi-agent work on  
+                    <a href="https://www.instagram.com/reel/DUKFQPTEoJB/?igsh=MXBxcWw5djdtZmhqcg==" target="_blank">STEM media engagement</a>!
+                    </li>
                     <li><span class="news-date">2025 Dec</span> - Our paper received <a
                             href="https://multiagents.org/2026/" target="_blank" rel="noopener noreferrer">Best Paper Award</a> from AAAI WAIC!</li>
                     <li><span class="news-date">2025 Oct</span> - I attended <a href="https://cscw.acm.org/2025/" target="_blank" rel="noopener noreferrer">CSCW</a> 🇳🇴 and presented our two papers on
