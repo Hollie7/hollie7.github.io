@@ -226,7 +226,6 @@
       margin-top: 2px;
     }
 
-    /* Interactive Projects */
     .section-label {
       font-size: 0.75em;
       font-weight: 600;
@@ -236,54 +235,65 @@
       margin-bottom: 16px;
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 60px;
+    .gallery-2col {
+      columns: 2;
+      margin-bottom: 48px;
     }
 
-    .project-card {
-      border-radius: 10px;
+    /* Override default gallery-item hover for 2col items (hover scoped to inner wrapper) */
+    .gallery-2col .gallery-item {
+      overflow: visible;
+      border-radius: 0;
+    }
+
+    .gallery-2col .gallery-item:hover img {
+      transform: none;
+    }
+
+    .gallery-2col .gallery-item:hover .gallery-item-overlay {
+      transform: translateY(100%);
+    }
+
+    .gallery-item-inner {
+      position: relative;
       overflow: hidden;
-      background: #f7f6f3;
-      text-decoration: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .gallery-2col .gallery-item-inner:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-2col .gallery-item-inner:hover .gallery-item-overlay {
+      transform: translateY(0);
+    }
+
+    .design-tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 8px 2px 0;
+    }
+
+    .design-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      background: rgba(55, 53, 47, 0.08);
+      border-radius: 4px;
+      font-size: 10px;
+      color: #6B7280;
+      font-weight: 500;
+    }
+
+    .gallery-item-overlay .item-desc {
       display: block;
-    }
-
-    .project-card:hover {
-      text-decoration: none;
-    }
-
-    .project-card:hover .project-card-title {
-      color: var(--accent-color);
-    }
-
-    .project-card-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-
-    .project-card-body {
-      padding: 14px 16px 16px;
-    }
-
-    .project-card-title {
-      font-size: 0.95em;
-      font-weight: 600;
-      color: #37352F;
-      margin: 0 0 4px 0;
-      transition: color 0.2s ease;
-    }
-
-    .project-card-desc {
-      font-size: 0.82em;
-      color: rgba(55, 53, 47, 0.55);
-      margin: 0;
-      line-height: 1.5;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 3px;
+      line-height: 1.4;
+      letter-spacing: 0;
     }
 
     @media (max-width: 700px) {
@@ -291,8 +301,8 @@
         columns: 2;
       }
 
-      .projects-grid {
-        grid-template-columns: 1fr;
+      .gallery-2col {
+        columns: 1;
       }
     }
 
@@ -341,40 +351,83 @@
   <div class="gallery-container">
 
     <p class="section-label">Interactive</p>
-    <div class="projects-grid">
+    <div class="gallery gallery-2col">
 
-      <a class="project-card" href="https://dont-take-phd.vercel.app/" target="_blank">
-        <img class="project-card-image" src="design/dont-take-phd.png" alt="Don't Take a PhD" loading="lazy">
-        <div class="project-card-body">
-          <p class="project-card-title">Don't Take a PhD</p>
-          <p class="project-card-desc">A browser game about navigating the PhD application process.</p>
+      <div class="gallery-item">
+        <div class="gallery-item-inner">
+          <a href="https://dont-take-phd.vercel.app/" target="_blank">
+            <img src="design/dont-take-phd.png" alt="Don't Take a PhD" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Don't Take PhD</span>
+              <span class="item-desc">A browser game about navigating the PhD application process.</span>
+              <time>Dec 29, 2025</time>
+            </div>
+          </a>
         </div>
-      </a>
+        <div class="design-tag-group">
+          <span class="design-tag">React</span>
+          <span class="design-tag">Tailwind CSS</span>
+          <span class="design-tag">DeepSeek API</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-item-inner">
+          <a href="https://editor.p5js.org/Hollie7/full/Ouj81IhhK" target="_blank">
+            <img src="design/wizard-hands.png" alt="Wizard Hands" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Wizard Hands</span>
+              <span class="item-desc">A browser spell-casting experience powered by your camera and gestures.</span>
+              <time>Sep 3, 2025</time>
+            </div>
+          </a>
+        </div>
+        <div class="design-tag-group">
+          <span class="design-tag">p5.js</span>
+          <span class="design-tag">MediaPipe Hands</span>
+          <span class="design-tag">Webcam</span>
+        </div>
+      </div>
 
     </div>
 
     <p class="section-label">Illustrations & Posters</p>
     <div class="gallery">
 
-      <!-- <div class="gallery-item">
-        <img src="design/Closing_Keynote_instagram.png" alt="Committee Poster" loading="lazy">
+      <div class="gallery-item">
+        <div class="gallery-item-inner">
+          <!-- <a href="https://dont-take-phd.vercel.app/" target="_blank"> -->
+            <img src="design/Committe_Poster_Vertical_BW.png" alt="ICHEC 2025 Committee Poster" loading="lazy">
         <div class="gallery-item-overlay"><span>ICHEC Conference Poster</span><time>Sep 28, 2025</time></div>
+          </a>
+        </div>
+        <div class="design-tag-group">
+          <span class="design-tag">Figma</span>
+        </div>
       </div>
 
-      <div class="gallery-item">
-        <img src="design/Opening_Keynote_Instagram.png" alt="Committee Poster" loading="lazy">
+      <!-- <div class="gallery-item">
+        <img src="design/Committe_Poster_Vertical_BW.png" alt="ICHEC 2025 Committee Poster" loading="lazy">
         <div class="gallery-item-overlay"><span>ICHEC Conference Poster</span><time>Sep 28, 2025</time></div>
       </div> -->
 
       <div class="gallery-item">
-        <img src="design/Committe_Poster_Vertical_BW.png" alt="ICHEC 2025 Committee Poster" loading="lazy">
-        <div class="gallery-item-overlay"><span>ICHEC Conference Poster</span><time>Sep 28, 2025</time></div>
+        <div class="gallery-item-inner">
+          <!-- <a href="https://dont-take-phd.vercel.app/" target="_blank"> -->
+          <img src="design/ICHEC 2025 SMU.png" alt="ICHEC 2025 logo" loading="lazy">
+        <div class="gallery-item-overlay"><span>ICHEC Conference Logo</span><time>May 23, 2025</time></div>
+          </a>
+        </div>
+        <div class="design-tag-group">
+          <span class="design-tag">Figma</span>
+          <span class="design-tag">Procreate</span>
+        </div>
       </div>
 
-      <div class="gallery-item">
+      <!-- <div class="gallery-item">
         <img src="design/ICHEC 2025 SMU.png" alt="ICHEC 2025 logo" loading="lazy">
         <div class="gallery-item-overlay"><span>ICHEC Conference Logo</span><time>May 23, 2025</time></div>
-      </div>
+      </div> -->
 
       <div class="gallery-item">
         <img src="design/doodle-1.jpg" alt="Doodle 1" loading="lazy">
