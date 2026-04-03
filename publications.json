@@ -1,0 +1,304 @@
+[
+  {
+    "id": "multi-agent-common-knowledge",
+    "sort": "2026-01-26",
+    "keywords": ["multi-agent", "featured"],
+    "thumbnail": "research/multi-agent-common-knowledge/thumbnail.png",
+    "link": "https://arxiv.org/pdf/2603.18786#page=126",
+    "venue": "AAAI 2026 - Theory of Mind for AI (ToM4AI) Workshop",
+    "title": "Who Knows Who Knows? A Step Toward Common Knowledge in Multi-Agent Systems",
+    "authors": [
+      {"id": "self"},
+      {"id": "amber"},
+      {"id": "jingshu"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "multi-agent-evaluation",
+    "sort": "2026-01-20",
+    "keywords": ["multi-agent", "featured"],
+    "thumbnail": "research/multi-agent-evaluation/thumbnail.png",
+    "link": "https://multiagents.org/2026_papers/socially_aware_multi_agent.pdf",
+    "venue": "AAAI 2026 - Advancing LLM-Based Multi-Agent Collaboration Workshop",
+    "title": "Toward Socially Aware Multi-Agent Systems: Measuring Group-Level Influence of LLM Agents",
+    "authors": [
+      {"id": "self"},
+      {"id": "yugin"},
+      {"id": "zicheng"},
+      {"id": "yibin"},
+      {"id": "yichieh"}
+    ],
+    "awards": [
+      {"icon": "fa-trophy", "text": "AAAI WMAC 2026 Best Paper Award"}
+    ]
+  },
+  {
+    "id": "ai-emotional-older-full",
+    "sort": "2026-06-19",
+    "keywords": ["accessibility"],
+    "thumbnail": "research/ai-emotional-older-full/thumbnail.PNG",
+    "venue": "To appear in DIS 2026 - Full Paper",
+    "title": "Designing with Tensions: Older Adults' Emotional Support-Seeking Under System-Level Constraints in Conversational AI",
+    "authors": [
+      {"id": "mengqi"},
+      {"id": "self"},
+      {"id": "zicheng"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "opinionated-chatbot",
+    "sort": "2026-10-18",
+    "keywords": ["human-ai", "featured"],
+    "thumbnail": "research/opinionated-chatbot/thumbnail.PNG",
+    "venue": "To appear in CSCW 2026 - Full Paper",
+    "title": "Understanding and Supporting Online Discussion with Opinionated Chatbots",
+    "authors": [
+      {"id": "self"},
+      {"id": "chilan"},
+      {"name": "Zihan Liu"},
+      {"id": "zhengtao"},
+      {"id": "yibin"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "similarity-support-seeking",
+    "sort": "2026-03-18",
+    "keywords": ["human-ai"],
+    "thumbnail": "research/similarity-support-seeking/thumbnail.png",
+    "venue": "To appear in CSCW 2026 - Full Paper",
+    "title": "Shared Similarity Between Humans and Chatbots: Exploring Human Willingness to Seek Social Support From Chatbots",
+    "authors": [
+      {"id": "zicheng"},
+      {"id": "self"},
+      {"name": "Jefferson Lim"},
+      {"id": "chilan"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "ai-emotional-older",
+    "sort": "2026-02-19",
+    "keywords": ["accessibility"],
+    "thumbnail": "research/ai-emotional-older/thumbnail.png",
+    "venue": "To appear in CHI 2026 - Poster",
+    "title": "When Humans Don't Feel Like an Option: Contextual Factors That Shape When Older Adults Turn to Conversational AI for Emotional Support",
+    "authors": [
+      {"id": "mengqi"},
+      {"id": "self"},
+      {"id": "zicheng"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "ai-exhibit-personality",
+    "sort": "2026-04-15",
+    "keywords": ["human-ai", "featured"],
+    "thumbnail": "research/ai-exhibit-personality/thumbnail.jpg",
+    "link": "https://arxiv.org/abs/2601.12727",
+    "venue": "To appear in CHI 2026 - Full Paper",
+    "title": "AI-exhibited Personality Traits Can Shape Human Self-concept through Conversations",
+    "authors": [
+      {"id": "jingshu"},
+      {"id": "self"},
+      {"name": "Nattapat Boonprakong"},
+      {"id": "zicheng"},
+      {"name": "Yitian Yang"},
+      {"id": "yichieh"}
+    ],
+    "awards": [
+      {"icon": "fa-medal", "text": "CHI 2026 Honourable Mention Award"}
+    ]
+  },
+  {
+    "id": "virtual-kinship",
+    "sort": "2026-04-15",
+    "keywords": ["human-ai", "accessibility", "featured"],
+    "thumbnail": "research/virtual-kinship/thumbnail.png",
+    "link": "https://arxiv.org/abs/2602.22993",
+    "venue": "To appear in CHI 2026 - Full Paper",
+    "title": "Understanding Older Adults' Experiences of Support, Concerns, and Risks from Kinship-Role AI-Generated Influencers",
+    "authors": [
+      {"id": "self"},
+      {"id": "black"},
+      {"id": "jingshu"},
+      {"id": "lihan"},
+      {"id": "chilan"},
+      {"name": "Yijia Xu"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "multi-agents-social",
+    "sort": "2025-10-16",
+    "keywords": ["multi-agent", "human-ai", "featured"],
+    "thumbnail": "research/multi-agents-social/thumbnail.png",
+    "link": "https://doi.org/10.1145/3757633",
+    "venue": "CSCW 2025 - Full Paper",
+    "title": "Multi-Agents are Social Groups: Investigating Social Influence of Multiple Agents in Human-Agent Interactions",
+    "authors": [
+      {"id": "self", "note": "†"},
+      {"id": "yugin", "note": "†"},
+      {"id": "zicheng"},
+      {"id": "yibin"},
+      {"id": "yichieh"}
+    ],
+    "awards": [
+      {"icon": "fa-award", "text": "CSCW 2025 Methods Recognition"},
+      {"icon": "fa-trophy", "text": "ICA 2025 Top Paper Award"}
+    ]
+  },
+  {
+    "id": "mental-health-stigma",
+    "sort": "2025-05-02",
+    "keywords": ["mental-health", "human-ai", "featured"],
+    "thumbnail": "research/mental-health-stigma/thumbnail.png",
+    "link": "https://doi.org/10.1145/3710987",
+    "venue": "CSCW 2025 - Full Paper",
+    "title": "From Interaction to Attitude: Exploring the Impact of Human-AI Cooperation on Mental Illness Stigma",
+    "authors": [
+      {"id": "self"},
+      {"id": "jack"},
+      {"name": "Tianwen Zhu"},
+      {"id": "naomi"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "llm-uncertainty",
+    "sort": "2025-03-01",
+    "keywords": ["human-ai"],
+    "thumbnail": "research/llm-uncertainty/thumbnail.png",
+    "link": "https://doi.org/10.1016/j.ijhcs.2025.103455",
+    "venue": "IJHCS 2025 - Full Paper",
+    "title": "Confronting Verbalized Uncertainty: Understanding How LLM's Verbalized Uncertainty Influences Users in AI-Assisted Decision-Making",
+    "authors": [
+      {"id": "zhengtao"},
+      {"id": "self"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "social-norms",
+    "sort": "2025-10-17",
+    "keywords": ["multi-agent", "human-ai", "featured"],
+    "thumbnail": "research/social-norms/thumbnail.jpg",
+    "link": "https://doi.org/10.1145/3715070.3749246",
+    "venue": "CSCW 2025 - Companion",
+    "title": "Multi-Agent Systems Shape Social Norms for Prosocial Behavior Change",
+    "authors": [
+      {"id": "yibin"},
+      {"id": "self"},
+      {"id": "yugin"},
+      {"id": "zicheng"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "greater-sum",
+    "sort": "2025-04-25",
+    "keywords": ["multi-agent", "human-ai", "featured"],
+    "thumbnail": "research/greater-sum/thumbnail.jpg",
+    "link": "https://doi.org/10.1145/3706599.3719973",
+    "venue": "CHI 2025 - Extended Abstract",
+    "title": "Greater than the Sum of its Parts: Exploring Social Influence of Multi-Agents",
+    "authors": [
+      {"id": "self"},
+      {"id": "yugin"},
+      {"id": "zicheng"},
+      {"id": "yibin"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "multi-ai-opinions",
+    "sort": "2025-04-10",
+    "keywords": ["multi-agent", "human-ai", "featured"],
+    "thumbnail": "research/multi-ai-opinions/thumbnail.png",
+    "link": "https://openreview.net/forum?id=6zlttMWe4G",
+    "venue": "ICLR 2025 - Human-AI Coevolution Workshop",
+    "title": "The More, The Stronger? Investigating How Multi-Agent AI Shapes Human Opinions",
+    "authors": [
+      {"id": "self"},
+      {"id": "yugin"},
+      {"id": "zicheng"},
+      {"id": "maojia"},
+      {"id": "yibin"},
+      {"id": "yichieh"}
+    ],
+    "awards": [
+      {"icon": "fa-star", "text": "Spotlight Talk"}
+    ]
+  },
+  {
+    "id": "ai-literacy-older",
+    "sort": "2025-04-25",
+    "keywords": ["accessibility"],
+    "thumbnail": "research/ai-literacy-older/thumbnail.png",
+    "link": "https://doi.org/10.1145/3706599.3720033",
+    "venue": "CHI 2025 - Extended Abstract",
+    "title": "AI Literacy Education for Older Adults: Motivations, Challenges and Preferences",
+    "authors": [
+      {"id": "eugene"},
+      {"id": "self"},
+      {"id": "zicheng"},
+      {"id": "jingshu"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "vr-ageism",
+    "sort": "2024-05-11",
+    "keywords": ["accessibility"],
+    "thumbnail": "research/vr-ageism/thumbnail.png",
+    "link": "https://doi.org/10.1145/3613905.3650914",
+    "venue": "CHI 2024 - Extended Abstract",
+    "title": "Mitigating Ageism through Virtual Reality: Intergenerational Collaborative Escape Room Design",
+    "authors": [
+      {"id": "ruotong"},
+      {"name": "Shuyu Yin"},
+      {"id": "self"},
+      {"id": "peinuan"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
+    "id": "causality-vis",
+    "sort": "2023-01-01",
+    "keywords": ["visualization"],
+    "thumbnail": "research/causality-vis/thumbnail.png",
+    "link": "https://doi.org/10.1109/TVCG.2023.3327376",
+    "venue": "IEEE TVCG 2023 - Full Paper",
+    "title": "Causality-Based Visual Analysis of Questionnaire Responses",
+    "authors": [
+      {"name": "Renzhong Li"},
+      {"name": "Weiwei Cui"},
+      {"id": "self"},
+      {"name": "Xiao Xie"},
+      {"name": "Rui Ding"},
+      {"name": "Yun Wang"},
+      {"name": "Haidong Zhang"},
+      {"name": "Hong Zhou"},
+      {"name": "Yingcai Wu"}
+    ]
+  },
+  {
+    "id": "wikilink",
+    "sort": "2022-11-05",
+    "keywords": ["visualization"],
+    "thumbnail": "research/wikilink/thumbnail.jpg",
+    "link": "https://doi.org/10.3390/jintelligence10040103",
+    "venue": "Journal of Intelligence 2022 - Full Paper",
+    "title": "WikiLink: An Encyclopedia-Based Semantic Network for Design Creativity",
+    "authors": [
+      {"id": "haoyu"},
+      {"name": "Qianzhi Jing"},
+      {"id": "self"},
+      {"name": "Lingyun Sun"},
+      {"name": "Peter Childs"},
+      {"name": "Liuqing Chen"}
+    ]
+  }
+]
