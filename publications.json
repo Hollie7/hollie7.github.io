@@ -2,7 +2,7 @@
   {
     "id": "multi-agent-common-knowledge",
     "sort": "2026-01-26",
-    "keywords": ["multi-agent", "featured"],
+    "keywords": ["multi-agent"],
     "thumbnail": "research/multi-agent-common-knowledge/thumbnail.png",
     "link": "https://arxiv.org/pdf/2603.18786#page=126",
     "venue": "AAAI 2026 - Theory of Mind for AI (ToM4AI) Workshop",
