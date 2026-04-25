@@ -15,25 +15,6 @@
     ]
   },
   {
-    "id": "multi-agent-evaluation",
-    "sort": "2026-01-20",
-    "keywords": ["multi-agent", "featured"],
-    "thumbnail": "research/multi-agent-evaluation/thumbnail.png",
-    "link": "https://multiagents.org/2026_papers/socially_aware_multi_agent.pdf",
-    "venue": "AAAI 2026 - Advancing LLM-Based Multi-Agent Collaboration Workshop",
-    "title": "Toward Socially Aware Multi-Agent Systems: Measuring Group-Level Influence of LLM Agents",
-    "authors": [
-      {"id": "self"},
-      {"id": "yugin"},
-      {"id": "zicheng"},
-      {"id": "yibin"},
-      {"id": "yichieh"}
-    ],
-    "awards": [
-      {"icon": "fa-trophy", "text": "AAAI WMAC 2026 Best Paper Award"}
-    ]
-  },
-  {
     "id": "ai-emotional-older-full",
     "sort": "2026-06-19",
     "keywords": ["accessibility"],
@@ -83,7 +64,7 @@
     "sort": "2026-02-19",
     "keywords": ["accessibility"],
     "thumbnail": "research/ai-emotional-older/thumbnail.png",
-    "venue": "To appear in CHI 2026 - Poster",
+    "venue": "CHI 2026 - Poster",
     "title": "When Humans Don't Feel Like an Option: Contextual Factors That Shape When Older Adults Turn to Conversational AI for Emotional Support",
     "authors": [
       {"id": "mengqi"},
@@ -97,8 +78,8 @@
     "sort": "2026-04-15",
     "keywords": ["human-ai", "featured"],
     "thumbnail": "research/ai-exhibit-personality/thumbnail.jpg",
-    "link": "https://arxiv.org/abs/2601.12727",
-    "venue": "To appear in CHI 2026 - Full Paper",
+    "link": "https://doi.org/10.1145/3772318.3790654",
+    "venue": "CHI 2026 - Full Paper",
     "title": "AI-exhibited Personality Traits Can Shape Human Self-concept through Conversations",
     "authors": [
       {"id": "jingshu"},
@@ -117,8 +98,8 @@
     "sort": "2026-04-15",
     "keywords": ["human-ai", "accessibility", "featured"],
     "thumbnail": "research/virtual-kinship/thumbnail.png",
-    "link": "https://arxiv.org/abs/2602.22993",
-    "venue": "To appear in CHI 2026 - Full Paper",
+    "link": "https://doi.org/10.1145/3772318.3791224",
+    "venue": "CHI 2026 - Full Paper",
     "title": "Understanding Older Adults' Experiences of Support, Concerns, and Risks from Kinship-Role AI-Generated Influencers",
     "authors": [
       {"id": "self"},
@@ -132,7 +113,7 @@
   },
   {
     "id": "multi-agents-social",
-    "sort": "2025-10-16",
+    "sort": "2027-12-31",
     "keywords": ["multi-agent", "human-ai", "featured"],
     "thumbnail": "research/multi-agents-social/thumbnail.png",
     "link": "https://doi.org/10.1145/3757633",
@@ -147,7 +128,8 @@
     ],
     "awards": [
       {"icon": "fa-award", "text": "CSCW 2025 Methods Recognition"},
-      {"icon": "fa-trophy", "text": "ICA 2025 Top Paper Award"}
+      {"icon": "fa-trophy", "text": "ICA 2025 Top Paper Award"},
+      {"icon": "fa-trophy", "text": "AAAI WMAC 2026 Best Paper Award"}
     ]
   },
   {
