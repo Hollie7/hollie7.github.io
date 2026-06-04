@@ -15,6 +15,23 @@
     ]
   },
   {
+    "id": "ai-health-stigma",
+    "sort": "2026-05-30",
+    "keywords": ["mental-health", "human-ai", "featured"],
+    "thumbnail": "research/ai-health-stigma/thumbnail.png",
+    "link": "https://www.nature.com/articles/s41746-026-02832-x",
+    "venue": "npj Digital Medicine 2026 - Article",
+    "title": "Mapping the Role of Artificial Intelligence in Health-Related Stigma: A Scoping Review",
+    "authors": [
+      {"id": "self"},
+      {"id": "jack"},
+      {"name": "Wataru Akahori"},
+      {"name": "Han Meng"},
+      {"name": "Shuqi Wang"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
     "id": "ai-emotional-older-full",
     "sort": "2026-06-19",
     "keywords": ["accessibility"],
