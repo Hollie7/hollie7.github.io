@@ -36,7 +36,8 @@
     "sort": "2026-06-19",
     "keywords": ["accessibility"],
     "thumbnail": "research/ai-emotional-older-full/thumbnail.PNG",
-    "venue": "To appear in DIS 2026 - Full Paper",
+    "link": "https://arxiv.org/abs/2605.05552",
+    "venue": "DIS 2026 - Full Paper",
     "title": "Designing with Tensions: Older Adults' Emotional Support-Seeking Under System-Level Constraints in Conversational AI",
     "authors": [
       {"id": "mengqi"},
@@ -81,7 +82,8 @@
     "sort": "2026-02-19",
     "keywords": ["accessibility"],
     "thumbnail": "research/ai-emotional-older/thumbnail.png",
-    "venue": "CHI 2026 - Poster",
+    "link": "https://dl.acm.org/doi/10.1145/3772363.3798404",
+    "venue": "CHI 2026 - Extended Abstract",
     "title": "When Humans Don't Feel Like an Option: Contextual Factors That Shape When Older Adults Turn to Conversational AI for Emotional Support",
     "authors": [
       {"id": "mengqi"},
@@ -115,7 +117,7 @@
     "sort": "2026-04-15",
     "keywords": ["human-ai", "accessibility", "featured"],
     "thumbnail": "research/virtual-kinship/thumbnail.png",
-    "link": "https://doi.org/10.1145/3772318.3791224",
+    "link": "https://dl.acm.org/doi/full/10.1145/3772318.3791224",
     "venue": "CHI 2026 - Full Paper",
     "title": "Understanding Older Adults' Experiences of Support, Concerns, and Risks from Kinship-Role AI-Generated Influencers",
     "authors": [
