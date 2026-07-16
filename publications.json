@@ -64,7 +64,7 @@
   },
   {
     "id": "similarity-support-seeking",
-    "sort": "2026-03-18",
+    "sort": "2026-10-18",
     "keywords": ["human-ai"],
     "thumbnail": "research/similarity-support-seeking/thumbnail.png",
     "venue": "To appear in CSCW 2026 - Full Paper",
@@ -95,7 +95,7 @@
   {
     "id": "ai-exhibit-personality",
     "sort": "2026-04-15",
-    "keywords": ["human-ai", "featured"],
+    "keywords": ["human-ai"],
     "thumbnail": "research/ai-exhibit-personality/thumbnail.jpg",
     "link": "https://doi.org/10.1145/3772318.3790654",
     "venue": "CHI 2026 - Full Paper",
@@ -128,19 +128,22 @@
       {"id": "chilan"},
       {"name": "Yijia Xu"},
       {"id": "yichieh"}
+    ],
+    "media": [
+      {"icon": "fa-quote-right", "text": "Featured in Rest of World", "link": "https://restofworld.org/2026/china-seniors-ai-slop/"}
     ]
   },
   {
     "id": "multi-agents-social",
-    "sort": "2027-12-31",
+    "sort": "2025-10-16",
     "keywords": ["multi-agent", "human-ai", "featured"],
     "thumbnail": "research/multi-agents-social/thumbnail.png",
     "link": "https://doi.org/10.1145/3757633",
     "venue": "CSCW 2025 - Full Paper",
     "title": "Multi-Agents are Social Groups: Investigating Social Influence of Multiple Agents in Human-Agent Interactions",
     "authors": [
-      {"id": "self", "note": "†"},
-      {"id": "yugin", "note": "†"},
+      {"id": "self", "note": "*"},
+      {"id": "yugin", "note": "*"},
       {"id": "zicheng"},
       {"id": "yibin"},
       {"id": "yichieh"}
@@ -149,7 +152,10 @@
       {"icon": "fa-award", "text": "CSCW 2025 Methods Recognition"},
       {"icon": "fa-trophy", "text": "ICA 2025 Top Paper Award"},
       {"icon": "fa-trophy", "text": "AAAI WMAC 2026 Best Paper Award"}
-    ]
+    ],
+    "media": [
+      {"icon": "fa-quote-right", "text": "Featured in NUS Knowledge@Computing ", "link": "https://www.comp.nus.edu.sg/features/when-ai-talks-in-groups-how-multi-agent-systems-may-be-shaping-your-opinions/"}
+      ]
   },
   {
     "id": "mental-health-stigma",
@@ -211,6 +217,9 @@
       {"id": "zicheng"},
       {"id": "yibin"},
       {"id": "yichieh"}
+    ],
+    "media": [
+      {"icon": "fa-quote-right", "text": "Featured in NUS Knowledge@Computing ", "link": "https://www.comp.nus.edu.sg/features/when-ai-talks-in-groups-how-multi-agent-systems-may-be-shaping-your-opinions/"}
     ]
   },
   {
@@ -236,7 +245,7 @@
   {
     "id": "ai-literacy-older",
     "sort": "2025-04-25",
-    "keywords": ["accessibility"],
+    "keywords": ["accessibility", "featured"],
     "thumbnail": "research/ai-literacy-older/thumbnail.png",
     "link": "https://doi.org/10.1145/3706599.3720033",
     "venue": "CHI 2025 - Extended Abstract",

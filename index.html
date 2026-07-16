@@ -14,6 +14,9 @@
             --accent-hover: #B85D48;
             --accent-light: #E8957E;
             --accent-bg: rgba(212, 115, 94, 0.1);
+            --media-color: #C9971C;
+            --media-hover: #A67816;
+            --media-bg: rgba(201, 151, 28, 0.1);
         }
 
         body {
@@ -223,6 +226,29 @@
 
         .strong i {
             margin-right: 4px;
+        }
+
+        .media-mention {
+            color: var(--media-color);
+            font-weight: 500;
+            font-size: 0.875em;
+            margin-top: 4px !important;
+            margin-bottom: 0 !important;
+        }
+
+        .media-mention i {
+            margin-right: 4px;
+        }
+
+        .media-mention a {
+            color: var(--media-color);
+            text-decoration: none;
+        }
+
+        .media-mention a:hover {
+            color: var(--media-hover);
+            text-decoration: underline;
+            text-decoration-color: var(--media-hover);
         }
 
         .venue-label {
@@ -1214,6 +1240,14 @@
             }).join(' ');
             awardsHTML = '<p class="strong">' + awardsContent + '</p>';
         }
+        var mediaHTML = '';
+        if (pub.media && pub.media.length > 0) {
+            var mediaContent = pub.media.map(function (m) {
+                var inner = '<i class="fas ' + m.icon + '"></i> ' + m.text;
+                return m.link ? '<a href="' + m.link + '" target="_blank" rel="noopener noreferrer">' + inner + '</a>' : inner;
+            }).join(' ');
+            mediaHTML = '<p class="media-mention">' + mediaContent + '</p>';
+        }
         return '<div class="row research-project" data-sort="' + pub.sort + '" data-keywords="' + keywords + '">' +
             '<div class="col-md-4">' +
             '<video loop muted playsinline poster="' + pub.thumbnail + '"></video>' +
@@ -1223,6 +1257,7 @@
             '<h6>' + titleHTML + '</h6>' +
             '<p class="text-muted">' + authorsList + '</p>' +
             awardsHTML +
+            mediaHTML +
             '</div>' +
             '<div class="col-md-12"><hr class="dash"></div>' +
             '</div>';
