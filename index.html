@@ -707,9 +707,6 @@
 
                      <p style="font-size: 13px; color: var(--accent-color); margin-top: 1rem;">
                     If you are interested in research collaboration, feel free to <a href="#" class="email-anchor" style="color: var(--accent-color);">contact me</a>.
-                    <a id="toggle-student-note" href="#" style="font-size: 12px; color: rgba(55, 53, 47, 0.65);">More &gt;</a><span id="student-note" style="display: none; font-size: 12px; color: rgba(55, 53, 47, 0.65);"><br>
-                        (Note: If you are an undergraduate or master's student interested in research internships, please contact my supervisor <a href="https://sites.google.com/view/ai4sg/about" target="_blank" rel="noopener noreferrer" style="color: rgba(55, 53, 47, 0.65);">EJ</a> first!)
-                    </span>
                 </p>
                 </div>
 
@@ -1415,19 +1412,6 @@
             header.removeClass('scrolled');
             $('body').removeClass('header-scrolled');
         }
-    });
-
-    // Toggle student note
-    $('#toggle-student-note').click(function() {
-        var $this = $(this);
-        $('#student-note').slideToggle(300, function() {
-            if ($(this).is(':visible')) {
-                $this.text('< Hide');
-            } else {
-                $this.text('More >');
-            }
-        });
-        return false;
     });
 </script>
 
