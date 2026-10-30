@@ -1,5 +1,20 @@
 [
   {
+    "id": "learn-ai-with-ai",
+    "sort": "2026-10-07",
+    "keywords": ["accessibility", "human-ai", "featured"],
+    "thumbnail": "research/learn-ai-with-ai/thumbnail.png",
+    "link": "https://www.sciencedirect.com/science/article/pii/S1071581926002284",
+    "venue": "IJHCS 2026 - Full Paper",
+    "title": "Learn AI with AI: Designing Conversational Agents to Support Older Adults in Learning about AI",
+    "authors": [
+      {"id": "eugene"},
+      {"id": "self"},
+      {"id": "mengqi"},
+      {"id": "yichieh"}
+    ]
+  },
+  {
     "id": "multi-agent-common-knowledge",
     "sort": "2026-01-26",
     "keywords": ["multi-agent"],
@@ -51,7 +66,8 @@
     "sort": "2026-10-18",
     "keywords": ["human-ai", "featured"],
     "thumbnail": "research/opinionated-chatbot/thumbnail.PNG",
-    "venue": "To appear in CSCW 2026 - Full Paper",
+    "link": "https://doi.org/10.1145/3817024",
+    "venue": "CSCW 2026 - Full Paper",
     "title": "Understanding and Supporting Online Discussion with Opinionated Chatbots",
     "authors": [
       {"id": "self"},
@@ -67,7 +83,8 @@
     "sort": "2026-10-18",
     "keywords": ["human-ai"],
     "thumbnail": "research/similarity-support-seeking/thumbnail.png",
-    "venue": "To appear in CSCW 2026 - Full Paper",
+    "link": "https://doi.org/10.1145/3816998",
+    "venue": "CSCW 2026 - Full Paper",
     "title": "Shared Similarity Between Humans and Chatbots: Exploring Human Willingness to Seek Social Support From Chatbots",
     "authors": [
       {"id": "zicheng"},
